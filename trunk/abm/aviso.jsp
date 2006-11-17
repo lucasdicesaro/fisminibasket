@@ -15,6 +15,6 @@
 			jugador : <html:text property="jugador"/><html:errors property="jugador"/><br/>
 			<html:submit/><html:cancel/>
 		</html:form>
-	</body>
+	</body> 
 </html>
 
