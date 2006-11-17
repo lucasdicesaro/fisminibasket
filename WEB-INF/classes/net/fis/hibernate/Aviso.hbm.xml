@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="net.fis.hibernate.Aviso" table="aviso" catalog="minibasket">
+        <id name="aviId" type="java.lang.Integer">
+            <column name="AVI_ID" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="jugador" class="net.fis.hibernate.Jugador" fetch="select">
+            <column name="JUGADOR_JUG_ID" not-null="true" />
+        </many-to-one>
+        <property name="aviEstado" type="java.lang.String">
+            <column name="AVI_ESTADO" length="20" not-null="true" />
+        </property>
+        <property name="aviFecha" type="java.util.Date">
+            <column name="AVI_FECHA" length="19" not-null="true" />
+        </property>
+        <property name="aviTipo" type="java.lang.String">
+            <column name="AVI_TIPO" length="20" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+#
+#Thu Nov 16 20:46:52 ART 2006
+genBasicCompId=false
+sessionFactoryName=net.fis.hibernate.HibernateSessionFactory
+profile=
+daoSFId=
+version=3.1
+jndiPath=
+springDaoFile=
+useJavaTypes=true
+keyGenerator=increment
+libInstallFolder=/WEB-INF/lib
+addLibs2Project=true
+genVersionTag=false
+sessionFactoryId=
+basePersistenceClass=
+reSettingsFile=
+configFile=/MiniBasket/src/hibernate.cfg.xml
+createConfigFile=true
+addLibs2Classpath=true
+baseDaoClass=BaseHibernateDAO
