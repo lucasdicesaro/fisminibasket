@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+  <data-sources />
+
+  <form-beans >
+    <form-bean name="FederacionBean" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="descripcion" type="java.lang.String" />
+    </form-bean>
+    <form-bean name="MedicoBean" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="nombre" type="java.lang.String" />
+      <form-property name="matricula" type="java.lang.String" />
+      <form-property name="apellido" type="java.lang.String" />
+    </form-bean>
+    <form-bean name="CategoriaBean" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="hasta" type="java.lang.String" />
+      <form-property name="desde" type="java.lang.String" />
+      <form-property name="descripcion" type="java.lang.String" />
+      <form-property name="minimo" type="java.lang.String" />
+    </form-bean>
+    <form-bean name="ClubBean" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="federacion" type="java.lang.String" />
+      <form-property name="descripcion" type="java.lang.String" />
+      <form-property name="federado" type="java.lang.String" />
+    </form-bean>
+    <form-bean name="JugadorBean" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="nombre" type="java.lang.String" />
+      <form-property name="nacimiento" type="java.lang.String" />
+      <form-property name="federacion" type="java.lang.String" />
+      <form-property name="club" type="java.lang.String" />
+      <form-property name="categoria" type="java.lang.String" />
+      <form-property name="apellido" type="java.lang.String" />
+      <form-property name="federado" type="java.lang.String" />
+    </form-bean>
+    <form-bean name="FichaMedicaBean" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="antecedentes" type="java.lang.String" />
+      <form-property name="cardiopatias" type="java.lang.String" />
+      <form-property name="alergias" type="java.lang.String" />
+      <form-property name="historial" type="java.lang.String" />
+      <form-property name="medico" type="java.lang.String" />
+      <form-property name="estado" type="java.lang.String" />
+      <form-property name="buco" type="java.lang.String" />
+      <form-property name="jugador" type="java.lang.String" />
+    </form-bean>
+    <form-bean name="AvisoBean" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="fecha" type="java.lang.String" />
+      <form-property name="aviso" type="java.lang.String" />
+      <form-property name="estado" type="java.lang.String" />
+      <form-property name="tipo" type="java.lang.String" />
+      <form-property name="jugador" type="java.lang.String" />
+    </form-bean>
+  </form-beans>
+
+  <global-exceptions />
+  <global-forwards />
+
+
+  <action-mappings >
+    <action
+	  name="FederacionBean"
+      input="/abm/federacion.jsp"
+      path="/federacion"
+      type="net.fis.struts.FederacionAction"
+      parameter="listAll">
+		<forward name="success" path="/succes.jsp"/>
+    	<forward name="failure" path="/failure.jsp"/>
+    </action>
+    <action
+	  name="MedicoBean"
+      input="/abm/medico.jsp"
+      path="/medico"
+      type="net.fis.struts.MedicoAction"
+      parameter="listAll">
+   		<forward name="success" path="/succes.jsp"/>
+    	<forward name="failure" path="/failure.jsp"/>
+    </action>
+    <action
+      name="CategoriaBean"
+      input="/abm/categoria.jsp"
+      path="/categoria"
+      type="net.fis.struts.CategoriaAction"
+      parameter="listAll">
+		<forward name="success" path="/succes.jsp"/>
+    	<forward name="failure" path="/failure.jsp"/>
+    </action>
+    <action
+      name="ClubBean"
+      input="/abm/club.jsp"
+      path="/club"
+      type="net.fis.struts.ClubAction"
+      parameter="listAll">
+		<forward name="success" path="/succes.jsp"/>
+    	<forward name="failure" path="/failure.jsp"/>
+    </action>
+    <action
+      name="JugadorBean"
+      input="/abm/jugador.jsp"
+      path="/jugador"
+      type="net.fis.struts.JugadorAction"
+      parameter="listAll">
+		<forward name="success" path="/succes.jsp"/>
+    	<forward name="failure" path="/failure.jsp"/>
+    </action>
+    <action
+      name="FichaMedicaBean"
+      input="/abm/fichamedica.jsp"
+      path="/fichamedica"
+      type="net.fis.struts.FichaMedicaAction"
+      parameter="listAll">
+		<forward name="success" path="/succes.jsp"/>
+    	<forward name="failure" path="/failure.jsp"/>
+    </action>
+    <action
+      name="AvisoBean"
+      input="/abm/aviso.jsp"
+      path="/aviso"
+      type="net.fis.struts.AvisoAction"
+      parameter="listAll">
+		<forward name="success" path="/succes.jsp"/>
+    	<forward name="failure" path="/failure.jsp"/>
+    </action>
+
+  </action-mappings>
+
+  <message-resources parameter="net.fis.struts.ApplicationResources" />
+</struts-config>
+
