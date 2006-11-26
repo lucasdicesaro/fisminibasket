@@ -18,10 +18,7 @@ import org.hibernate.Transaction;
 public class FederacionDAO extends BaseHibernateDAO
 {
 
-    private static final Log   log             = LogFactory.getLog(FederacionDAO.class);
-
-    // property constants
-    public static final String FED_DESCRIPCION = "fedDescripcion";
+    private static final Log log = LogFactory.getLog(FederacionDAO.class);
 
     public void save(Federacion transientInstance)
     {

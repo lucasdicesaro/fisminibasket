@@ -18,12 +18,7 @@ import org.hibernate.Transaction;
 public class ClubDAO extends BaseHibernateDAO
 {
 
-    private static final Log   log             = LogFactory.getLog(ClubDAO.class);
-
-    // property constants
-    public static final String CLU_DESCRIPCION = "cluDescripcion";
-
-    public static final String CLU_FEDERADO    = "cluFederado";
+    private static final Log log = LogFactory.getLog(ClubDAO.class);
 
     public Integer findMax()
     {
@@ -33,7 +28,7 @@ public class ClubDAO extends BaseHibernateDAO
             Query query = getSession().createQuery("select max(id.clubId) from Club ");
             List result = query.list();
             Object objeto = result.get(0);
-            if(objeto == null)
+            if (objeto == null)
             {
                 return new Integer(0);
             }
@@ -48,7 +43,7 @@ public class ClubDAO extends BaseHibernateDAO
             throw re;
         }
     }
-    
+
     public void save(Club transientInstance)
     {
         log.debug("saving Club instance");
@@ -143,7 +138,7 @@ public class ClubDAO extends BaseHibernateDAO
             Query query = getSession().createQuery("from Club where id.clubId = " + integer.toString());
             List result = query.list();
             return (Club) result.get(0);
-         }
+        }
         catch (RuntimeException re)
         {
             log.error("find all failed", re);
