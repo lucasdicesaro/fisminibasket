@@ -28,7 +28,9 @@
 
 			<display:column title="Id"          property="id.clubId"       sortable="true" headerClass="sortable" />
 
-			<display:column title="Federacion"  property="id.federacion.federacionId"   sortable="true" headerClass="sortable" />
+			<display:column title="Federacion"  property="id.federacion.fedDescripcion"   sortable="true" headerClass="sortable"
+							href="../federacion.do?action=listOne"
+							paramId="id" paramProperty="id.federacion.federacionId"/>
 
 			<display:column title="Descripcion" property="cluDescripcion" sortable="true" headerClass="sortable" />
 			
