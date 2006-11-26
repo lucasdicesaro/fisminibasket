@@ -1,5 +1,5 @@
 #
-#Thu Nov 16 20:46:52 ART 2006
+#Mon Nov 20 03:28:18 ART 2006
 genBasicCompId=false
 sessionFactoryName=net.fis.hibernate.HibernateSessionFactory
 profile=
@@ -18,4 +18,4 @@ reSettingsFile=
 configFile=/MiniBasket/src/hibernate.cfg.xml
 createConfigFile=true
 addLibs2Classpath=true
-baseDaoClass=BaseHibernateDAO
+baseDaoClass=net.fis.hibernate.BaseHibernateDAO
