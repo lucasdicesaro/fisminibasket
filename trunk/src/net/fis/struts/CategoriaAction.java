@@ -89,11 +89,11 @@ public class CategoriaAction extends DispatchAction
         DynaActionForm daf = (DynaActionForm) form;
         Categoria categoria = categoriaDAO.findById(new Integer((String) daf.getString("id")));
 
-        daf.set("hasta", categoria.getCatHasta());
-        daf.set("desde", categoria.getCatDesde());
+        daf.set("hasta", categoria.getCatHasta().toString());
+        daf.set("desde", categoria.getCatDesde().toString());
         daf.set("descripcion", categoria.getCatDescripcion());
-        daf.set("minimo", categoria.getCatMinJug());
-        daf.set("id", categoria.getCatId());
+        daf.set("minimo", String.valueOf(categoria.getCatMinJug()));
+        daf.set("id", String.valueOf(categoria.getCatId()));
 
     }
 
