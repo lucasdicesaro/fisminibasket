@@ -26,6 +26,10 @@
 		<mapping resource="net/fis/hibernate/Categoria.hbm.xml" />
 		<mapping resource="net/fis/hibernate/FichaMedica.hbm.xml" />
 		<mapping resource="net/fis/hibernate/Federacion.hbm.xml" />
+		<mapping resource="net/fis/hibernate/RolPermiso.hbm.xml" />
+		<mapping resource="net/fis/hibernate/Permiso.hbm.xml" />
+		<mapping resource="net/fis/hibernate/Usuario.hbm.xml" />
+		<mapping resource="net/fis/hibernate/Rol.hbm.xml" />
 
 	</session-factory>
 

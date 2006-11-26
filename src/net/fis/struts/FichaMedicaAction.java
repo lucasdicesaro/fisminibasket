@@ -69,8 +69,8 @@ public class FichaMedicaAction extends DispatchAction
 
         List resultados = fichaMedicaDAO.findAll(" order by fmId");
 
-        session.setAttribute("fichaMedicaes", resultados);
-        ActionForward forward = mapping.findForward("fichaMedicaes");
+        session.setAttribute("fichasMedicas", resultados);
+        ActionForward forward = mapping.findForward("fichasMedicas");
 
         return forward;
 

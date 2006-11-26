@@ -18,14 +18,7 @@ import org.hibernate.Transaction;
 public class MedicoDAO extends BaseHibernateDAO
 {
 
-    private static final Log   log           = LogFactory.getLog(MedicoDAO.class);
-
-    // property constants
-    public static final String MED_NOMBRE    = "medNombre";
-
-    public static final String MED_APELLIDO  = "medApellido";
-
-    public static final String MED_MATRICULA = "medMatricula";
+    private static final Log log = LogFactory.getLog(MedicoDAO.class);
 
     public void save(Medico transientInstance)
     {

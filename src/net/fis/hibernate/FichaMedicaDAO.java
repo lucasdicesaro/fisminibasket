@@ -18,20 +18,7 @@ import org.hibernate.Transaction;
 public class FichaMedicaDAO extends BaseHibernateDAO
 {
 
-    private static final Log   log             = LogFactory.getLog(FichaMedicaDAO.class);
-
-    // property constants
-    public static final String FM_ESTADO       = "fmEstado";
-
-    public static final String FM_ALERGIAS     = "fmAlergias";
-
-    public static final String FM_CARDIOPATIAS = "fmCardiopatias";
-
-    public static final String FM_ANTECEDENTES = "fmAntecedentes";
-
-    public static final String FM_HISTORIAL    = "fmHistorial";
-
-    public static final String FM_BUCO_DEN     = "fmBucoDen";
+    private static final Log log = LogFactory.getLog(FichaMedicaDAO.class);
 
     public void save(FichaMedica transientInstance)
     {

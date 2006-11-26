@@ -18,12 +18,7 @@ import org.hibernate.Transaction;
 public class AvisoDAO extends BaseHibernateDAO
 {
 
-    private static final Log   log        = LogFactory.getLog(AvisoDAO.class);
-
-    // property constants
-    public static final String AVI_ESTADO = "aviEstado";
-
-    public static final String AVI_TIPO   = "aviTipo";
+    private static final Log log = LogFactory.getLog(AvisoDAO.class);
 
     public void save(Aviso transientInstance)
     {

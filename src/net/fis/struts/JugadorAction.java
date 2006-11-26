@@ -1,6 +1,7 @@
 package net.fis.struts;
 
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpSession;
 import net.fis.hibernate.CategoriaDAO;
 import net.fis.hibernate.ClubDAO;
 import net.fis.hibernate.ClubId;
+import net.fis.hibernate.Federacion;
 import net.fis.hibernate.FederacionDAO;
 import net.fis.hibernate.Jugador;
 import net.fis.hibernate.JugadorDAO;
@@ -33,6 +35,8 @@ import org.apache.struts.actions.DispatchAction;
  */
 public class JugadorAction extends DispatchAction
 {
+
+    public static SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
 
     /**
      * 
@@ -89,13 +93,27 @@ public class JugadorAction extends DispatchAction
         DynaActionForm daf = (DynaActionForm) form;
         Jugador jugador = jugadorDAO.findById(new Integer((String) daf.getString("id")));
 
-        daf.set("nombre", String.valueOf(jugador.getJugNombre()));
-        daf.set("nacimiento", String.valueOf(jugador.getJugFechaNac()));
+        daf.set("nombre", jugador.getJugNombre());
+
+        String fecha = formatter.format(jugador.getJugFechaNac());
+
+        String.valueOf(jugador.getJugFechaNac());
+        daf.set("nacimiento", fecha);
         daf.set("club", String.valueOf(jugador.getClub().getId().getClubId()));
         daf.set("categoria", String.valueOf(jugador.getCategoria().getCatId()));
-        daf.set("apellido", String.valueOf(jugador.getJugApellido()));
-        daf.set("federado", String.valueOf(jugador.getJugFederado()));
+        daf.set("apellido", jugador.getJugApellido());
+        daf.set("federado", jugador.getJugFederado());
         daf.set("id", String.valueOf(jugador.getJugId()));
+        daf.set("federacion", String.valueOf(jugador.getClub().getId().getFederacion().getFederacionId()));
+
+        HttpSession session = request.getSession();
+        ClubDAO clubDAO = new ClubDAO();
+        List clubes = clubDAO.findAll("");
+        session.setAttribute("clubes", clubes);
+
+        CategoriaDAO categoriaDAO = new CategoriaDAO();
+        List categorias = categoriaDAO.findAll("");
+        session.setAttribute("categorias", categorias);
 
     }
 
@@ -155,7 +173,10 @@ public class JugadorAction extends DispatchAction
 
         Jugador jugador = new Jugador();
         jugador.setJugNombre((String) PropertyUtils.getSimpleProperty(form, "nombre"));
-        // jugador.setJugFechaNac((String) PropertyUtils.getSimpleProperty(form, "nacimiento"));
+
+        String fecha = (String) PropertyUtils.getSimpleProperty(form, "nacimiento");
+        jugador.setJugFechaNac(formatter.parse(fecha));
+
         ClubDAO clubDAO = new ClubDAO();
         jugador.setClub(clubDAO.findByClubId(new Integer((String) PropertyUtils.getSimpleProperty(form, "club"))));
         CategoriaDAO categoriaDAO = new CategoriaDAO();
@@ -231,11 +252,15 @@ public class JugadorAction extends DispatchAction
         Jugador jugador = new Jugador();
         jugador.setJugId(new Integer((String) PropertyUtils.getSimpleProperty(form, "id")));
         jugador.setJugNombre((String) PropertyUtils.getSimpleProperty(form, "nombre"));
-        // jugador.setJugFechaNac((String) PropertyUtils.getSimpleProperty(form, "nacimiento"));
+
+        String fecha = (String) PropertyUtils.getSimpleProperty(form, "nacimiento");
+        jugador.setJugFechaNac(formatter.parse(fecha));
+
         ClubDAO clubDAO = new ClubDAO();
         FederacionDAO federacionDAO = new FederacionDAO();
-        ClubId clubId = new ClubId(new Integer((String) PropertyUtils.getSimpleProperty(form, "club")), federacionDAO.findById(new Integer(
-                (String) PropertyUtils.getSimpleProperty(form, "federacion"))));
+        Integer id = new Integer((String) PropertyUtils.getSimpleProperty(form, "club"));
+        Federacion federacion = federacionDAO.findById(new Integer((String) PropertyUtils.getSimpleProperty(form, "federacion")));
+        ClubId clubId = new ClubId(id, federacion);
         jugador.setClub(clubDAO.findById(clubId));
         CategoriaDAO categoriaDAO = new CategoriaDAO();
         jugador.setCategoria(categoriaDAO.findById(new Integer((String) PropertyUtils.getSimpleProperty(form, "categoria"))));

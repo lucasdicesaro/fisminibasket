@@ -67,10 +67,9 @@ public class ClubAction extends DispatchAction
         HttpSession session = request.getSession();
 
         ClubDAO clubDAO = new ClubDAO();
+        List clubes = clubDAO.findAll(" order by id");
 
-        List resultados = clubDAO.findAll(" order by id");
-
-        session.setAttribute("clubes", resultados);
+        session.setAttribute("clubes", clubes);
         ActionForward forward = mapping.findForward("clubes");
 
         return forward;
@@ -96,6 +95,12 @@ public class ClubAction extends DispatchAction
         daf.set("federacion", String.valueOf(club.getId().getFederacion().getFederacionId()));
         daf.set("descripcion", String.valueOf(club.getCluDescripcion()));
         daf.set("federado", String.valueOf(club.getCluFederado()));
+        
+        FederacionDAO federacionDAO = new FederacionDAO();
+        List federaciones = federacionDAO.findAll("");
+        
+        HttpSession session = request.getSession();
+        session.setAttribute("federaciones", federaciones);        
     }
 
     /**

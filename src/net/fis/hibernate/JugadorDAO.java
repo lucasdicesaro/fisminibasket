@@ -18,14 +18,7 @@ import org.hibernate.Transaction;
 public class JugadorDAO extends BaseHibernateDAO
 {
 
-    private static final Log   log          = LogFactory.getLog(JugadorDAO.class);
-
-    // property constants
-    public static final String JUG_FEDERADO = "jugFederado";
-
-    public static final String JUG_NOMBRE   = "jugNombre";
-
-    public static final String JUG_APELLIDO = "jugApellido";
+    private static final Log log = LogFactory.getLog(JugadorDAO.class);
 
     public void save(Jugador transientInstance)
     {
