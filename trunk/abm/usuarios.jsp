@@ -28,7 +28,9 @@
 
 			<display:column title="Id"       property="usuId"       sortable="true" headerClass="sortable" />
 
-			<display:column title="Rol"      property="rol.rolId"   sortable="true" headerClass="sortable" />
+			<display:column title="Rol"      property="rol.rolDescripcion"   sortable="true" headerClass="sortable" 
+							href="../rol.do?action=listOne"
+							paramId="id" paramProperty="rol.rolId"/>
 
 			<display:column title="Nombre"   property="usuNombre"   sortable="true" headerClass="sortable" />
 			

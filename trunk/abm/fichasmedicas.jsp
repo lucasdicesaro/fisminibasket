@@ -28,10 +28,14 @@
 
 			<display:column title="Id"          property="fmId"       sortable="true" headerClass="sortable" />
 
-			<display:column title="Medico"  property="medico.medId"   sortable="true" headerClass="sortable" />
+			<display:column title="Medico"  property="medico.medApellido"   sortable="true" headerClass="sortable"
+							href="../medico.do?action=listOne"
+							paramId="id" paramProperty="medico.medId"/>
 
-			<display:column title="Jugador" property="jugador.jugId" sortable="true" headerClass="sortable" />
-			
+			<display:column title="Jugador" property="jugador.jugApellido" sortable="true" headerClass="sortable"
+							href="../jugador.do?action=listOne"
+							paramId="id" paramProperty="jugador.jugId"/>
+
 			<display:column title="Estado"    property="fmEstado"    sortable="true" headerClass="sortable" />
 			
 			<display:column title="Alergias"    property="fmAlergias"    sortable="true" headerClass="sortable" />

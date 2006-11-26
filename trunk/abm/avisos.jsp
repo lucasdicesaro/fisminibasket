@@ -28,7 +28,9 @@
 
 			<display:column title="Id"      property="aviId"     sortable="true" headerClass="sortable" />
 
-			<display:column title="Jugador" property="jugador"   sortable="true" headerClass="sortable" />
+			<display:column title="Jugador" property="jugador.jugApellido"   sortable="true" headerClass="sortable"
+							href="../jugador.do?action=listOne"
+							paramId="id" paramProperty="jugador.jugId"/>
 
 			<display:column title="Estado"  property="aviEstado" sortable="true" headerClass="sortable" />
 			
