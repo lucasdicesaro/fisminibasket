@@ -6,121 +6,419 @@
   <data-sources />
 
   <form-beans >
+
     <form-bean name="FederacionBean" type="org.apache.struts.action.DynaActionForm">
-      <form-property name="descripcion" type="java.lang.String" />
+      <form-property name = "id"          type = "java.lang.String" />
+      <form-property name = "descripcion" type = "java.lang.String" />
+      <form-property name = "metodo"      type = "java.lang.String" />
     </form-bean>
+    
     <form-bean name="MedicoBean" type="org.apache.struts.action.DynaActionForm">
-      <form-property name="nombre" type="java.lang.String" />
-      <form-property name="matricula" type="java.lang.String" />
-      <form-property name="apellido" type="java.lang.String" />
+      <form-property name = "id"        type = "java.lang.String" />
+      <form-property name = "metodo"    type = "java.lang.String" />
+      <form-property name = "nombre"    type = "java.lang.String" />
+      <form-property name = "matricula" type = "java.lang.String" />
+      <form-property name = "apellido"  type = "java.lang.String" />
     </form-bean>
+
     <form-bean name="CategoriaBean" type="org.apache.struts.action.DynaActionForm">
-      <form-property name="hasta" type="java.lang.String" />
-      <form-property name="desde" type="java.lang.String" />
-      <form-property name="descripcion" type="java.lang.String" />
-      <form-property name="minimo" type="java.lang.String" />
+      <form-property name = "id"          type = "java.lang.String" />
+      <form-property name = "metodo"      type = "java.lang.String" />
+      <form-property name = "hasta"       type = "java.lang.String" />
+      <form-property name = "desde"       type = "java.lang.String" />
+      <form-property name = "descripcion" type = "java.lang.String" />
+      <form-property name = "minimo"      type = "java.lang.String" />
     </form-bean>
+
     <form-bean name="ClubBean" type="org.apache.struts.action.DynaActionForm">
-      <form-property name="federacion" type="java.lang.String" />
-      <form-property name="descripcion" type="java.lang.String" />
-      <form-property name="federado" type="java.lang.String" />
+      <form-property name = "id"          type = "java.lang.String" />
+      <form-property name = "metodo"      type = "java.lang.String" />
+      <form-property name = "federacion"  type = "java.lang.String" />
+      <form-property name = "descripcion" type = "java.lang.String" />
+      <form-property name = "federado"    type = "java.lang.String" />
     </form-bean>
+
     <form-bean name="JugadorBean" type="org.apache.struts.action.DynaActionForm">
-      <form-property name="nombre" type="java.lang.String" />
-      <form-property name="nacimiento" type="java.lang.String" />
-      <form-property name="federacion" type="java.lang.String" />
-      <form-property name="club" type="java.lang.String" />
-      <form-property name="categoria" type="java.lang.String" />
-      <form-property name="apellido" type="java.lang.String" />
-      <form-property name="federado" type="java.lang.String" />
+      <form-property name = "id"         type = "java.lang.String" />
+      <form-property name = "metodo"     type = "java.lang.String" />
+      <form-property name = "nombre"     type = "java.lang.String" />
+      <form-property name = "nacimiento" type = "java.lang.String" />
+      <form-property name = "federacion" type = "java.lang.String" />
+      <form-property name = "club"       type = "java.lang.String" />
+      <form-property name = "categoria"  type = "java.lang.String" />
+      <form-property name = "apellido"   type = "java.lang.String" />
+      <form-property name = "federado"   type = "java.lang.String" />
     </form-bean>
+
     <form-bean name="FichaMedicaBean" type="org.apache.struts.action.DynaActionForm">
-      <form-property name="antecedentes" type="java.lang.String" />
-      <form-property name="cardiopatias" type="java.lang.String" />
-      <form-property name="alergias" type="java.lang.String" />
-      <form-property name="historial" type="java.lang.String" />
-      <form-property name="medico" type="java.lang.String" />
-      <form-property name="estado" type="java.lang.String" />
-      <form-property name="buco" type="java.lang.String" />
-      <form-property name="jugador" type="java.lang.String" />
+      <form-property name = "id"           type = "java.lang.String" />
+      <form-property name = "metodo"       type = "java.lang.String" />
+      <form-property name = "antecedentes" type = "java.lang.String" />
+      <form-property name = "cardiopatias" type = "java.lang.String" />
+      <form-property name = "alergias"     type = "java.lang.String" />
+      <form-property name = "historial"    type = "java.lang.String" />
+      <form-property name = "medico"       type = "java.lang.String" />
+      <form-property name = "estado"       type = "java.lang.String" />
+      <form-property name = "buco"         type = "java.lang.String" />
+      <form-property name = "jugador"      type = "java.lang.String" />
     </form-bean>
+
     <form-bean name="AvisoBean" type="org.apache.struts.action.DynaActionForm">
-      <form-property name="fecha" type="java.lang.String" />
-      <form-property name="aviso" type="java.lang.String" />
-      <form-property name="estado" type="java.lang.String" />
-      <form-property name="tipo" type="java.lang.String" />
-      <form-property name="jugador" type="java.lang.String" />
+      <form-property name = "id"      type = "java.lang.String" />
+      <form-property name = "metodo"  type = "java.lang.String" />
+      <form-property name = "fecha"   type = "java.lang.String" />
+      <form-property name = "aviso"   type = "java.lang.String" />
+      <form-property name = "estado"  type = "java.lang.String" />
+      <form-property name = "tipo"    type = "java.lang.String" />
+      <form-property name = "jugador" type = "java.lang.String" />
     </form-bean>
+
+    <form-bean name="RolBean" type="org.apache.struts.action.DynaActionForm">
+      <form-property name = "id"          type = "java.lang.String" />
+      <form-property name = "descripcion" type = "java.lang.String" />
+    </form-bean>
+    
+    <form-bean name="UsuarioBean" type="org.apache.struts.action.DynaActionForm">
+      <form-property name = "id"       type = "java.lang.String" />
+      <form-property name = "rol"      type = "java.lang.String" />
+      <form-property name = "nombre"   type = "java.lang.String" />
+      <form-property name = "apellido" type = "java.lang.String" />
+      <form-property name = "password"  type = "java.lang.String" />
+    </form-bean>
+    
+    <form-bean name="PermisoBean" type="org.apache.struts.action.DynaActionForm">
+      <form-property name = "id"          type = "java.lang.String" />
+      <form-property name = "descripcion" type = "java.lang.String" />
+    </form-bean>    
+
   </form-beans>
 
   <global-exceptions />
-  <global-forwards />
 
+	<global-forwards>
+    	<forward name="index" path="/index.jsp" />
+    	<forward name="login" path="/log/login.jsp" />
+    </global-forwards>
 
   <action-mappings >
-    <action
-	  name="FederacionBean"
-      input="/abm/federacion.jsp"
-      path="/federacion"
-      type="net.fis.struts.FederacionAction"
-      parameter="listAll">
-		<forward name="success" path="/succes.jsp"/>
-    	<forward name="failure" path="/failure.jsp"/>
+  
+    <action path      = "/federacion"
+            name      = "FederacionBean"
+            input     = "/abm/federacion.jsp"
+            type      = "net.fis.struts.FederacionAction"
+            scope     = "request"
+            parameter = "action">
+
+        <exception type = "java.lang.Exception" 
+                   key  = "error.security" 
+                   path = "/login.do"/> 
+
+		<forward name = "federaciones"
+                 path = "/abm/federaciones.jsp" />
+
+        <forward name = "select"
+                 path = "/abm/federacion.jsp" />
+
+        <forward name = "update"
+                 path = "/abm/federacion.jsp" />
+
+        <forward name = "create"
+                 path = "/abm/federacion.jsp" />
+
+        <forward name = "success"
+                 path = "/jsp/success.jsp" />
+
+        <forward name = "error"
+                 path = "/jsp/error.jsp" />
     </action>
-    <action
-	  name="MedicoBean"
-      input="/abm/medico.jsp"
-      path="/medico"
-      type="net.fis.struts.MedicoAction"
-      parameter="listAll">
-   		<forward name="success" path="/succes.jsp"/>
-    	<forward name="failure" path="/failure.jsp"/>
+  
+    <action name      = "MedicoBean"
+            input     = "/abm/medico.jsp"
+            path      = "/medico"
+            type      = "net.fis.struts.MedicoAction"
+            scope     = "request"
+            parameter = "action">
+        <exception type = "java.lang.Exception" 
+                   key  = "error.security" 
+                   path = "/login.do"/> 
+
+		<forward name = "medicos"
+                 path = "/abm/medicos.jsp" />
+
+        <forward name = "select"
+                 path = "/abm/medico.jsp" />
+
+        <forward name = "update"
+                 path = "/abm/medico.jsp" />
+
+        <forward name = "create"
+                 path = "/abm/medico.jsp" />
+
+        <forward name = "success"
+                 path = "/jsp/success.jsp" />
+
+        <forward name = "error"
+                 path = "/jsp/error.jsp" />
     </action>
-    <action
-      name="CategoriaBean"
-      input="/abm/categoria.jsp"
-      path="/categoria"
-      type="net.fis.struts.CategoriaAction"
-      parameter="listAll">
-		<forward name="success" path="/succes.jsp"/>
-    	<forward name="failure" path="/failure.jsp"/>
+    
+    <action name      = "CategoriaBean"
+            input     = "/abm/categoria.jsp"
+            path      = "/categoria"
+            type      = "net.fis.struts.CategoriaAction"
+            scope     = "request"
+            parameter = "action">
+        <exception type = "java.lang.Exception" 
+                   key  = "error.security" 
+                   path = "/login.do"/> 
+
+		<forward name = "categorias"
+                 path = "/abm/categorias.jsp" />
+
+        <forward name = "select"
+                 path = "/abm/categoria.jsp" />
+
+        <forward name = "update"
+                 path = "/abm/categoria.jsp" />
+
+        <forward name = "create"
+                 path = "/abm/categoria.jsp" />
+
+        <forward name = "success"
+                 path = "/jsp/success.jsp" />
+
+        <forward name = "error"
+                 path = "/jsp/error.jsp" />
     </action>
-    <action
-      name="ClubBean"
-      input="/abm/club.jsp"
-      path="/club"
-      type="net.fis.struts.ClubAction"
-      parameter="listAll">
-		<forward name="success" path="/succes.jsp"/>
-    	<forward name="failure" path="/failure.jsp"/>
+
+    <action name      = "ClubBean"
+            input     = "/abm/club.jsp"
+            path      = "/club"
+            type      = "net.fis.struts.ClubAction"
+            scope     = "request"
+            parameter = "action">
+
+        <exception type = "java.lang.Exception" 
+                   key  = "error.security" 
+                   path = "/login.do"/> 
+
+		<forward name = "clubes"
+                 path = "/abm/clubes.jsp" />
+
+        <forward name = "select"
+                 path = "/abm/club.jsp" />
+
+        <forward name = "update"
+                 path = "/abm/club.jsp" />
+
+        <forward name = "create"
+                 path = "/abm/club.jsp" />
+
+        <forward name = "success"
+                 path = "/jsp/success.jsp" />
+
+        <forward name = "error"
+                 path = "/jsp/error.jsp" />
     </action>
-    <action
-      name="JugadorBean"
-      input="/abm/jugador.jsp"
-      path="/jugador"
-      type="net.fis.struts.JugadorAction"
-      parameter="listAll">
-		<forward name="success" path="/succes.jsp"/>
-    	<forward name="failure" path="/failure.jsp"/>
+
+    <action name      = "JugadorBean"
+            input     = "/abm/jugador.jsp"
+            path      = "/jugador"
+            type      = "net.fis.struts.JugadorAction"
+            scope     = "request"
+            parameter = "action">
+
+        <exception type = "java.lang.Exception" 
+                   key  = "error.security" 
+                   path = "/login.do"/> 
+
+		<forward name = "jugadores"
+                 path = "/abm/jugadores.jsp" />
+
+        <forward name = "select"
+                 path = "/abm/jugador.jsp" />
+
+        <forward name = "update"
+                 path = "/abm/jugador.jsp" />
+
+        <forward name = "create"
+                 path = "/abm/jugador.jsp" />
+
+        <forward name = "success"
+                 path = "/jsp/success.jsp" />
+
+        <forward name = "error"
+                 path = "/jsp/error.jsp" />
     </action>
-    <action
-      name="FichaMedicaBean"
-      input="/abm/fichamedica.jsp"
-      path="/fichamedica"
-      type="net.fis.struts.FichaMedicaAction"
-      parameter="listAll">
-		<forward name="success" path="/succes.jsp"/>
-    	<forward name="failure" path="/failure.jsp"/>
+    <action name      = "FichaMedicaBean"
+            input     = "/abm/fichamedica.jsp"
+            path      = "/fichamedica"
+            type      = "net.fis.struts.FichaMedicaAction"
+            scope     = "request"
+            parameter = "action">
+
+        <exception type = "java.lang.Exception" 
+                   key  = "error.security" 
+                   path = "/login.do"/> 
+
+		<forward name = "fichasMedicas"
+                 path = "/abm/fichasmedicas.jsp" />
+
+        <forward name = "select"
+                 path = "/abm/fichamedica.jsp" />
+
+        <forward name = "update"
+                 path = "/abm/fichamedica.jsp" />
+
+        <forward name = "create"
+                 path = "/abm/fichamedica.jsp" />
+
+        <forward name = "success"
+                 path = "/jsp/success.jsp" />
+
+        <forward name = "error"
+                 path = "/jsp/error.jsp" />
     </action>
-    <action
-      name="AvisoBean"
-      input="/abm/aviso.jsp"
-      path="/aviso"
-      type="net.fis.struts.AvisoAction"
-      parameter="listAll">
-		<forward name="success" path="/succes.jsp"/>
-    	<forward name="failure" path="/failure.jsp"/>
+
+    <action name      = "AvisoBean"
+            input     = "/abm/aviso.jsp"
+            path      = "/aviso"
+            type      = "net.fis.struts.AvisoAction"
+            scope     = "request"
+            parameter = "action">
+
+		<forward name = "avisos"
+                 path = "/abm/avisos.jsp" />
+
+        <forward name = "select"
+                 path = "/abm/aviso.jsp" />
+
+        <forward name = "update"
+                 path = "/abm/aviso.jsp" />
+
+        <forward name = "create"
+                 path = "/abm/aviso.jsp" />
+
+        <forward name = "success"
+                 path = "/jsp/success.jsp" />
+
+        <forward name = "error"
+                 path = "/jsp/error.jsp" />
+
     </action>
+
+	<action name      = "todayBean"
+            input     = "/bus/today.jsp"
+            path      = "/today"
+            type      = "net.fis.struts.TodayAction"
+            scope     = "request"
+            parameter = "action">
+
+		<forward name = "today"
+                 path = "/bus/today.jsp" />
+
+		<forward name = "fichas"
+                 path = "/bus/fichas.jsp" />
+
+		<forward name = "avisos"
+                 path = "/bus/avisos.jsp" />
+
+
+        <forward name = "success"
+                 path = "/jsp/success.jsp" />
+
+        <forward name = "error"
+                 path = "/jsp/error.jsp" />
+
+    </action>
+
+
+	<action name      = "UsuarioBean"
+            input     = "/abm/usuario.jsp"
+            path      = "/usuario"
+            type      = "net.fis.struts.UsuarioAction"
+            scope     = "request"
+            parameter = "action">
+
+		<forward name = "usuarios"
+                 path = "/abm/usuarios.jsp" />
+
+        <forward name = "select"
+                 path = "/abm/usuario.jsp" />
+
+        <forward name = "update"
+                 path = "/abm/usuario.jsp" />
+
+        <forward name = "create"
+                 path = "/abm/usuario.jsp" />
+
+        <forward name = "valido"
+                 path = "/home.jsp" />
+
+        <forward name = "invalido"
+                 path = "/log/login.jsp" />
+
+        <forward name = "success"
+                 path = "/jsp/success.jsp" />
+
+        <forward name = "error"
+                 path = "/jsp/error.jsp" />
+
+    </action>
+
+	<action name      = "RolBean"
+            input     = "/abm/rol.jsp"
+            path      = "/rol"
+            type      = "net.fis.struts.RolAction"
+            scope     = "request"
+            parameter = "action">
+
+		<forward name = "roles"
+                 path = "/abm/roles.jsp" />
+
+        <forward name = "select"
+                 path = "/abm/rol.jsp" />
+
+        <forward name = "update"
+                 path = "/abm/rol.jsp" />
+
+        <forward name = "create"
+                 path = "/abm/rol.jsp" />
+
+        <forward name = "success"
+                 path = "/jsp/success.jsp" />
+
+        <forward name = "error"
+                 path = "/jsp/error.jsp" />
+
+    </action>
+
+	<action name      = "PermisoBean"
+            input     = "/abm/perimiso.jsp"
+            path      = "/permiso"
+            type      = "net.fis.struts.PermisoAction"
+            scope     = "request"
+            parameter = "action">
+
+		<forward name = "permisos"
+                 path = "/abm/permisos.jsp" />
+
+        <forward name = "select"
+                 path = "/abm/permiso.jsp" />
+
+        <forward name = "update"
+                 path = "/abm/permiso.jsp" />
+
+        <forward name = "create"
+                 path = "/abm/permiso.jsp" />
+
+        <forward name = "success"
+                 path = "/jsp/success.jsp" />
+
+        <forward name = "error"
+                 path = "/jsp/error.jsp" />
+
+    </action>
+
 
   </action-mappings>
 
