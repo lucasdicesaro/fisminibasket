@@ -170,10 +170,8 @@ public class FederacionAction extends DispatchAction
     public ActionForward delete(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception
     {
 
-        Federacion federacion = new Federacion();
-        federacion.setFederacionId(new Integer((String) PropertyUtils.getSimpleProperty(form, "id")));
-
         FederacionDAO federacionDAO = new FederacionDAO();
+        Federacion federacion = federacionDAO.findById(new Integer((String) PropertyUtils.getSimpleProperty(form, "id")));
         federacionDAO.delete(federacion);
 
         ActionForward forward = mapping.findForward("success");
@@ -238,8 +236,7 @@ public class FederacionAction extends DispatchAction
      */
     public ActionForward unespecified(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception
     {
-
-        return (mapping.findForward("error"));
+        return listAll(mapping, form, request, response);
     }
 
 }
