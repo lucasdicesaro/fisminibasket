@@ -1,0 +1,288 @@
+BODY {
+	SCROLLBAR-FACE-COLOR: #84888F;
+	SCROLLBAR-HIGHLIGHT-COLOR: #828892;
+	SCROLLBAR-SHADOW-COLOR: #595E66;
+	SCROLLBAR-3DLIGHT-COLOR: #A0A4AC;
+	SCROLLBAR-ARROW-COLOR: #FAA61A;
+	SCROLLBAR-TRACK-COLOR: #797D84;
+	SCROLLBAR-DARKSHADOW-COLOR: #333333;
+}
+
+.puntitos {
+	font-size: 5pt;
+	line-height: 5px;
+	color: #999999;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+.contacto {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #8E8E73;
+}
+.menu_nros {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #F06F22;
+	text-decoration: none;
+	background-color: #E2DDCF;
+}
+.menu_nros:hover {
+	color: #6A6A67;
+	text-decoration: blink;
+}
+
+.tit-home {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #687185;
+	text-decoration: none;
+
+}
+a.tit-home:hover {
+	color: #687185;
+	text-decoration: underline;
+}
+
+.tit1 {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #687185;
+	text-decoration: none;
+}
+
+.texto1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #595959;
+}
+
+.texto2 {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #9DA5B5;
+}
+.texto3 {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #666666;
+}
+.texto3:hover {
+	color: #F06F22;
+}
+
+.texto4 {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #666666;
+}
+
+.texto5 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #9F9F7C;
+}
+
+.texto6 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #9F9F7C;
+	text-decoration: none;
+}
+
+
+.texto7 {
+
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #F06F22;
+}
+
+
+.texto11 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #5D5D5D;
+}
+
+.pie {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #CCCCCC;
+}
+.textoArial9px {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #666666;
+}
+.subtitulo1 {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #8A8A66;
+	text-decoration: none;
+}
+.link1 {
+	color: #666666;
+	text-decoration: none;
+}
+.link1:hover  {
+	text-decoration: underline;
+}
+.link2:hover {
+	background-color: #E9EAE4;
+	padding-right: 3px;
+	padding-left: 3px;
+}
+a:hover {
+	color: #8A8A66;
+}
+.color1 {
+	color: #9F9F7C;
+}
+.naranja {
+	color: #FB6604;
+}
+.tabla1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	border: 1px #8A8A66;
+	background-color: #A7A787;
+	width: 530px;
+}
+.celdas-tabla1 {
+	background-color: #f5f5f5;
+	padding: 5px;
+}
+.color2 {
+	color: #81815F;
+}
+.linkblanco {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.linkblanco:hover {
+	color: #FFCC33;
+}
+.fecha {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #828B9F;
+}
+.tit-nota {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #999975;
+	text-decoration: none;
+}
+.botones-argentinos {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: none;
+	color: #666666;
+}
+.subtitulo1negro {
+
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #666666;
+	text-decoration: none;
+}
+.texto10gris {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #687185;
+}
+.tit1-blanco {
+
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.texto2_blanco {
+
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FFFFFF;
+}
+.menu-notas {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #FF6600;
+	font-weight: bold;
+	font-style: normal;
+	text-decoration: none;
+}
+.campos-bd {
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FF6600;
+	font-weight: bold;
+	font-style: normal;
+	text-decoration: none;
+}
+.blanco {
+
+	color: #FFFFFF;
+}
+.boton1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #F6F7FA;
+	background-color: #969EAB;
+}
+.form1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #F5F7FB;
+	border: 1px solid #959DAA;
+	font-size: 11px;
+	color: #687185;
+}
+.tit1-negro {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+	font-style: italic;
+}
+.tit-cronica {
+	font-family: "Arial Narrow";
+	font-size: 18px;
+	font-weight: 900;
+	color: #000000;
+	text-decoration: none;
+	font-style: normal;
+	line-height: normal;
+	border-top: thin none;
+	border-right: thin none;
+	border-bottom: thin none;
+	border-left: thin none;
+}
