@@ -1,0 +1,408 @@
+.titulo {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	background-image:url(../images/fondomodulo.JPG);
+	background-color: #ffffff;
+	color:#666666;
+	letter-spacing: normal;
+	margin-right: 15%;
+	text-align: center;
+	margin-left: 15%;
+	line-height: 20px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #CCCCCC;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+	height: 20;
+}
+
+.tituloLargo {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	background-image:url(../images/fondomodulo.JPG);
+	background-color: #ffffff;
+	color:#666666;
+	letter-spacing: normal;
+	margin-right: 7%;
+	text-align: center;
+	margin-left: 7%;
+	line-height: 20px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #CCCCCC;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+	height: 20;
+}
+
+/*
+td.subTituloForm {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color:#4D5C93;
+	letter-spacing: normal;
+	margin-right: 15%;
+	text-align: left;
+	margin-left: 15%;
+	line-height: 15px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #cecece;
+	border-bottom-color: #cecece;
+	height: 20;
+} */
+
+td.subTituloForm {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	background-color:#E2E9F3;/*#D5DFEE;*//*#E2E9F3*/
+	color:#3D4974;
+	letter-spacing: normal;
+	text-align:left;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-bottom-style: solid;
+	border-top-color:#c6c6c6;
+	border-bottom-color:#c6c6c6;
+	border-left-color:#c6c6c6;
+	border-right-color:#c6c6c6;
+	vertical-align:middle;
+	word-spacing: normal;
+}
+
+.criterioBusquedaTitle{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+/*	background-color:#FFFFDD;*/
+	background-color:#E2E9F3;
+	color:#3D4974;
+	letter-spacing: normal;
+	text-align:left;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-bottom-style: solid;
+	border-top-color:#c6c6c6;
+	border-bottom-color:#c6c6c6;
+	border-left-color:#c6c6c6;
+	border-right-color:#c6c6c6;
+	vertical-align:middle;
+	word-spacing: normal;
+	padding: 2px;
+} 
+.criterioBusquedaValues{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight:normal; font-style:italic;
+}
+
+	
+Table.formTable {
+ border-color:#dcdcdc;
+ border-right-color: #dcdcdc;
+ border-top-color: #dcdcdc;
+ border-top-style:  solid;
+ border-left-style: solid;
+ border-left-color: #dcdcdc;
+ border-bottom-color: #dcdcdc;
+ border-bottom-style: solid;
+ border-right-style: solid;
+ border-top-width: 1px;
+ border-right-width: 1px;
+ border-bottom-width: 1px;
+ border-left-width: 1px;
+ background-color: #fafcff;
+ margin-top: 20px;
+ margin-right: 20px;
+ margin-bottom: 20px;
+ margin-left: 20px;
+}
+
+select
+{
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+
+input
+{
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+
+TD.formRowHeader {
+	background-color:#7999C8;
+	color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 11px;
+/*    filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=1,startColorStr=#1F2367,endColorStr=#DDEEFF);*/
+}
+
+
+td.formAreaBotones{
+	border-top: 1px double #CCCCCC;
+	background-color : #ffffff;
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=1,startColorStr=#ffffff,endColorStr=#efefef);	
+/*    filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=1,startColorStr=#F0F0F0,endColorStr=#EEEEEE)*/
+}
+
+
+INPUT.formBoton {
+HEIGHT:20px;
+/*BORDER:1px solid #94B6DC;*/
+BORDER:1px solid #003366;
+TEXT-DECORATION:none;
+/*color:#:#53739C;*/
+/*BACKGROUND-IMAGE:url(../imagenes/bgcolor2.gif);*/
+COLOR:#000000;
+TEXT-DECORATION:none;
+FONT-SIZE:11px;FONT-FAMILY:tahoma,sans-serif;
+PADDING-RIGHT:2px;
+PADDING-LEFT:2px;
+margin-right: 5px;
+cursor: hand;
+/*background-color:#B8D6FC;*/
+background-color:#B6C8F0;
+}
+
+INPUT.formBotonInputFile {
+HEIGHT:20px;
+/*BORDER:1px solid #94B6DC;*/
+BORDER:1px solid #003366;
+TEXT-DECORATION:none;
+/*color:#:#53739C;*/
+/*BACKGROUND-IMAGE:url(../imagenes/bgcolor2.gif);*/
+COLOR:#000000;
+TEXT-DECORATION:none;
+FONT-SIZE:11px;FONT-FAMILY:tahoma,sans-serif;
+PADDING-RIGHT:2px;
+PADDING-LEFT:2px;
+margin-right: 5px;
+cursor: hand;
+/*background-color:#B8D6FC;*/
+/*background-color:#B6C8F0;*/
+}
+
+INPUT.formBotonDisabled {
+background-color: #B5B5C8;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-weight: bold;
+font-size: 11px;
+margin-right: 5px;
+height: 22px;
+border-top-color:#ECF5FF;
+border-right-color: #999999;
+border-bottom-color: #999999;
+border-left-color: #ECF5FF;
+border-left-width: thin;
+border-bottom-width: thin;
+border-right-width: thin;
+border-top-width: thin;
+border-top-style: solid;
+border-right-style:solid;
+border-bottom-style: solid;
+border-left-style: solid;
+}
+
+input.CformTextDisabled {
+	background-color: #efefef;
+}
+
+input.CformTextEnabled {
+	background-color: #ffffff;
+}
+
+
+/*Celda nombre de campo*/
+td.formNombre {
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	text-align: right;
+}
+
+td.formModificado {
+	color: #FF0000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	text-align: right;
+	font-style: italic;
+}
+
+label.formModificado {
+	color: #FF0000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	text-align: right;
+}
+
+td.formMensaje {
+	font-color: red;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+	border-color:#000000;
+	border-style: solid;
+	border-width: thin;
+}
+
+/*Celda dato*/
+td.formDato {
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	padding: 2;
+	margin-left: 150px;
+}
+
+td.formDatoModificado {
+	color: #FF0000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	padding: 2;
+	margin-left: 150px;
+}
+
+/*Celda vacia*/
+td.CformVacio {
+	width: 1;
+}
+
+.datosRepetidos {
+background-color:#CCCCCC;
+border: 2px double #000000;
+}
+
+
+INPUT.CformBotonTransp {
+	background: inherit;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #0000FF;
+	cursor: hand;
+	margin: -1px;
+	padding: 0px;
+	line-height: normal;
+	border: 0px none;
+}
+
+INPUT.CformBotonTranspDisabled {
+	background: inherit;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #efefef;
+	margin: -1px;
+	padding: 0px;
+	line-height: normal;
+	border: 0px none;
+}
+
+img.formImageHandCursor {
+	cursor:hand;
+}
+
+a.paginaInicioExitoOperacionLink {
+	cursor: hand;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight:bold;
+	color:#7999C8;
+/*	color:#F07800; */
+	TEXT-DECORATION:none;
+}
+
+label.formLeyenda {
+	color: #1F2367;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	text-align: right;
+	font-style: italic;
+	height:10;
+	margin-right: 5px;
+}
+
+.procesandoTitle{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	background-color:FFFFDD;/*#D5DFEE;*/
+	color:#3D4974;
+	letter-spacing: normal;
+	text-align:center;
+	line-height: 30px;/*11px;*/
+	border-width:1px;
+	border-style:ridge;/*solid;	*/
+	border-color:#cccccc;
+	vertical-align:middle;
+	word-spacing: normal;
+	padding: 3px;
+} 
+
+.procesandoValue{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight:normal; 
+}
+
+.procesandoBox {
+	visibility:hidden;
+	position:absolute;
+	z-index:2;
+	left: 446px; 
+	top: 280px;
+/*	left: 619px; 
+	top: 114px;*/
+}
+
+.aclaracionTable{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	background-color:FFFFDD;/*#D5DFEE;*/
+	color:#3D4974;
+	letter-spacing: normal;
+	text-align:center;
+	line-height: 20px;/*11px;*/
+	border-width:1px;
+	border-style:ridge;/*solid;	*/
+	border-color:#cccccc;
+	vertical-align:middle;
+	word-spacing: normal;
+	padding: 1px;
+} 
