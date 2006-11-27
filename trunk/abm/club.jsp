@@ -20,16 +20,43 @@
 
         function validar()
         {
-			desc       = document.FederacionBean.descripcion.value;
+			federacion  = document.ClubBean.federacion.value;
+			descripcion = document.ClubBean.descripcion.value;
+			federado    = document.ClubBean.federado.value;
 
-			if(desc == "")
+			if(federacion == "")
+			{
+				alert("Complete el campo Federacion");
+				return false;
+			}
+			if(descripcion == "")
 			{
 				alert("Complete el campo Descripcion");
+				return false;
+			}
+			if(federado == "")
+			{
+				alert("Complete el campo Federado");
 				return false;
 			}
 	    	return true;
     	}
 
+	// ]]>
+	</script>
+
+	<script language="javascript">
+	// <![CDATA[
+		function modificar()
+		{
+			document.forms[0].action.value = "setUpdate";
+			document.forms[0].submit();
+		}
+		function borrar(form)
+		{
+			document.forms[0].action.value = "delete";
+			document.forms[0].submit();
+		}
 	// ]]>
 	</script>
 
@@ -50,6 +77,11 @@
 				Modificar
 			</legend>
 		</logic:equal>
+		<logic:equal name="ClubBean" property="metodo" value="mostrar">
+			<legend>
+				Mostar
+			</legend>
+		</logic:equal>
 
 		<br><html:form action="/club" method="POST" onsubmit="return validar();"
 			target="_self">
@@ -68,10 +100,15 @@
 						Federacion:
 					<br></td>
 					<td>
-						<html:select property="federacion" >
-							<html:optionsCollection name="federaciones" value="federacionId" label="fedDescripcion"/>
-						</html:select>
-						<html:errors property="federacion" />
+						<logic:notEqual name="ClubBean" property="metodo" value="mostrar">
+							<html:select property="federacion" >
+								<html:optionsCollection name="federaciones" value="federacionId" label="fedDescripcion"/>
+							</html:select>
+							<html:errors property="federacion" />
+						</logic:notEqual>
+						<logic:equal name="ClubBean" property="metodo" value="mostrar">
+	                        <bean:write name="ClubBean" property="fedDesc" />
+						</logic:equal>
 					<br></td>
 				</tr>
 
@@ -80,8 +117,13 @@
 						Descripcion:
 					<br></td>
 					<td>
-						<html:text property="descripcion" name="ClubBean"/>
-						<html:errors property="descripcion" />
+						<logic:notEqual name="ClubBean" property="metodo" value="mostrar">
+							<html:text property="descripcion" name="ClubBean"/>
+							<html:errors property="descripcion" />
+						</logic:notEqual>
+						<logic:equal name="ClubBean" property="metodo" value="mostrar">
+	                        <bean:write name="ClubBean" property="descripcion" />						
+						</logic:equal>
 					<br></td>
 				</tr>
 
@@ -90,11 +132,16 @@
 						Federado:
 					<br></td>
 					<td>
-						<html:select property="federado" name="ClubBean" >
-							<html:option value="S">Si</html:option>
-							<html:option value="N">No</html:option>
-						</html:select>
-						<html:errors property="federado" />
+						<logic:notEqual name="ClubBean" property="metodo" value="mostrar">
+							<html:select property="federado" name="ClubBean" >
+								<html:option value="S">Si</html:option>
+								<html:option value="N">No</html:option>
+							</html:select>
+							<html:errors property="federado" />
+						</logic:notEqual>
+						<logic:equal name="ClubBean" property="metodo" value="mostrar">
+	                        <bean:write name="ClubBean" property="federado" />
+						</logic:equal>
 					<br></td>
 				</tr>
 
@@ -111,6 +158,11 @@
 								value="modificacion">
 								<html:hidden property="action" value="update" />
 								<input type="submit" value="Modificar" />
+							</logic:equal>
+							<logic:equal name="ClubBean" property="metodo" value="mostrar">
+								<input type="button" onClick="javascript:borrar()"    value="Borrar">
+								<input type="button" onClick="javascript:modificar()" value="Modificar">
+								<input type="hidden" name="action" value=""/>
 							</logic:equal>
 						</center>
 					</td>

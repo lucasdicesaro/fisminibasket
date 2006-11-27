@@ -19,16 +19,44 @@
 
         function validar()
         {
-			desc       = document.FederacionBean.descripcion.value;
+			nombre    = document.MedicoBean.nombre.value;
+			apellido  = document.MedicoBean.apellido.value;
+			matricula = document.MedicoBean.matricula.value;
 
-			if(desc == "")
+			if(nombre == "")
 			{
-				alert("Complete el campo Descripcion");
+				alert("Complete el campo Nombre");
 				return false;
 			}
+			if(apellido == "")
+			{
+				alert("Complete el campo Apellido");
+				return false;
+			}
+			if(categoria == "")
+			{
+				alert("Complete el campo Categoria");
+				return false;
+			}
+
 	    	return true;
     	}
 
+	// ]]>
+	</script>
+	
+		<script language="javascript">
+	// <![CDATA[
+		function modificar()
+		{
+			document.forms[0].action.value = "setUpdate";
+			document.forms[0].submit();
+		}
+		function borrar(form)
+		{
+			document.forms[0].action.value = "delete";
+			document.forms[0].submit();
+		}
 	// ]]>
 	</script>
 
@@ -49,6 +77,11 @@
 				Modificar
 			</legend>
 		</logic:equal>
+		<logic:equal name="MedicoBean" property="metodo" value="mostrar">
+			<legend>
+				Mostrar
+			</legend>
+		</logic:equal>
 
 		<html:form action="/medico" method="POST" onsubmit="return validar();"
 			target="_self">
@@ -67,8 +100,13 @@
 						Nombre:
 					</td>
 					<td>
-						<html:text property="nombre" name="MedicoBean"/>
-						<html:errors property="nombre" />
+						<logic:notEqual name="MedicoBean" property="metodo" value="mostrar">
+							<html:text property="nombre" name="MedicoBean"/>
+							<html:errors property="nombre" />
+						</logic:notEqual>
+						<logic:equal name="MedicoBean" property="metodo" value="mostrar">
+							<bean:write name="MedicoBean" property="nombre" />
+						</logic:equal>
 					</td>
 				</tr>
 
@@ -77,8 +115,13 @@
 						Apellido:
 					</td>
 					<td>
-						<html:text property="apellido" name="MedicoBean"/>
-						<html:errors property="apellido" />
+						<logic:notEqual name="MedicoBean" property="metodo" value="mostrar">
+							<html:text property="apellido" name="MedicoBean"/>
+							<html:errors property="apellido" />
+						</logic:notEqual>
+						<logic:equal name="MedicoBean" property="metodo" value="mostrar">
+							<bean:write name="MedicoBean" property="apellido" />
+						</logic:equal>
 					</td>
 				</tr>
 
@@ -87,8 +130,13 @@
 						Matricula:
 					</td>
 					<td>
-						<html:text property="matricula" name="MedicoBean" />
-						<html:errors property="matricula" />
+						<logic:notEqual name="MedicoBean" property="metodo" value="mostrar">
+							<html:text property="matricula" name="MedicoBean" />
+							<html:errors property="matricula" />
+						</logic:notEqual>
+						<logic:equal name="MedicoBean" property="metodo" value="mostrar">
+							<bean:write name="MedicoBean" property="matricula" />
+						</logic:equal>
 					</td>
 				</tr>
 
@@ -101,13 +149,17 @@
 								<html:reset value="Resetear" />
 								<html:submit value="Crear" />
 							</logic:equal>
-							<logic:equal name="MedicoBean" property="metodo"
-								value="modificacion">
+							<logic:equal name="MedicoBean" property="metodo" value="modificacion">
 								<html:hidden property="action" value="update" />
 								<input type="submit" value="Modificar" />
 							</logic:equal>
+							<logic:equal name="MedicoBean" property="metodo" value="mostrar">							
+								<input type="button" onClick="javascript:borrar()"    value="Borrar">
+								<input type="button" onClick="javascript:modificar()" value="Modificar">
+								<input type="hidden" name="action" value=""/>
+							</logic:equal>
 						</center>
-					<td>
+					</td>
 				</tr>
 			</table>
 		</html:form>

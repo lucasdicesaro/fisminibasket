@@ -1,9 +1,16 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
-
+<%@ page import="java.util.*" %>
+<%@ page import="net.fis.hibernate.*" %>
 <%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
 <%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic"%>
 <%@ taglib uri="http://displaytag.sf.net" prefix="display"%>
+
+<%
+				ArrayList permisos = (ArrayList)session.getAttribute("rolpermisos");
+				Iterator it = null;
+				RolPermiso rolPermiso = null;
+%>
 
 <html:html locale="true">
 <head>
@@ -37,18 +44,43 @@
     		<display:column title="Apellido" property="usuApellido" sortable="true" headerClass="sortable" />
 
 			<display:column title="Password" property="usuPassword" sortable="true" headerClass="sortable" />
-			
+
+			<%
+				it = permisos.iterator();
+				while(it.hasNext())
+				{
+					rolPermiso = (RolPermiso)it.next();
+					if(rolPermiso.getId().getPermiso().getPerDescripcion().equals("Modificar Usuario"))
+					{
+			%>
 
 			<display:column title="Modificar" href="../usuario.do?action=setUpdate" paramId="id" paramProperty="usuId" media="html">
 				<div align="center"><img src="../images/icono_editar.gif" width="20" height="10" border="0" /></div>
 			</display:column>
-
+			<%
+					}
+					if(rolPermiso.getId().getPermiso().getPerDescripcion().equals("Borrar Usuario"))
+					{
+				
+			%>
 			<display:column title="Eliminar"  href="../usuario.do?action=delete"    paramId="id" paramProperty="usuId" media="html">
 				<div align="center"><img src="../images/icono_borrar.gif" width="16" height="9" border="0" /></div>
 			</display:column>
+			<%
+					}
+				}
+			%>
 		</display:table>
 		</td>
 	</tr>
+			<%
+				it = permisos.iterator();
+				while(it.hasNext())
+				{
+					rolPermiso = (RolPermiso)it.next();
+					if(rolPermiso.getId().getPermiso().getPerDescripcion().equals("Insertar Usuario"))
+					{
+			%>
 	<tr>
 		<td colspan="2" align="center">
 			<form action="../usuario.do" method="POST">
@@ -57,6 +89,10 @@
 			</form>
 		</td>
 	</tr>
+			<%
+					}
+				}
+			%>
 </table>
 
 </fieldset>

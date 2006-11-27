@@ -31,6 +31,21 @@
 
 	// ]]>
 	</script>
+	
+	<script language="javascript">
+	// <![CDATA[
+		function modificar()
+		{
+			document.forms[0].action.value = "setUpdate";
+			document.forms[0].submit();
+		}
+		function borrar(form)
+		{
+			document.forms[0].action.value = "delete";
+			document.forms[0].submit();
+		}
+	// ]]>
+	</script>
 
 	<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
 	<META HTTP-EQUIV="Expires" CONTENT="-1">
@@ -47,6 +62,11 @@
 		<logic:equal name="FederacionBean" property="metodo" value="modificacion">
 			<legend>
 				Modificacion
+			</legend>
+		</logic:equal>
+		<logic:equal name="FederacionBean" property="metodo" value="mostrar">
+			<legend>
+				Mostrar
 			</legend>
 		</logic:equal>
 
@@ -67,8 +87,13 @@
 						Descripcion:
 					</td>
 					<td>
-						<html:text property="descripcion" />
-						<html:errors property="descripcion" />
+						<logic:notEqual name="FederacionBean" property="metodo" value="mostrar">
+							<html:text property="descripcion" />
+							<html:errors property="descripcion" />
+						</logic:notEqual>
+						<logic:equal name="FederacionBean" property="metodo" value="mostrar">
+							<bean:write name="FederacionBean" property="descripcion" />
+						</logic:equal>
 					</td>
 				</tr>
 
@@ -78,13 +103,17 @@
 							<logic:equal name="FederacionBean" property="metodo" value="alta">
 								<html:hidden property="action" value="insert" />
 								<html:cancel value="Cancelar" />
-								<html:reset value="Resetear" />
+								<html:reset  value="Resetear" />
 								<html:submit value="Crear" />
 							</logic:equal>
-							<logic:equal name="FederacionBean" property="metodo"
-								value="modificacion">
+							<logic:equal name="FederacionBean" property="metodo" value="modificacion">
 								<html:hidden property="action" value="update" />
 								<input type="submit" value="Modificar" />
+							</logic:equal>
+							<logic:equal name="FederacionBean" property="metodo" value="mostrar">
+								<input type="button" onClick="javascript:borrar()"    value="Borrar">
+								<input type="button" onClick="javascript:modificar()" value="Modificar">
+								<input type="hidden" name="action" value=""/>
 							</logic:equal>
 						</center>
 					<td>

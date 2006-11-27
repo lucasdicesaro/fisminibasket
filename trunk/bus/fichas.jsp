@@ -28,10 +28,14 @@
 
 			<display:column title="Id"        property="jugId"           sortable="true" headerClass="sortable" />
 
-			<display:column title="Club"      property="club.id.clubId"  sortable="true" headerClass="sortable" />
+			<display:column title="Club"      property="club.cluDescripcion"  sortable="true" headerClass="sortable"
+							href="../club.do?action=listOne"
+							paramId="id" paramProperty="club.id.clubId"/>
 
-			<display:column title="Categoria" property="categoria.catId" sortable="true" headerClass="sortable" />
-			
+			<display:column title="Categoria" property="categoria.catDescripcion" sortable="true" headerClass="sortable"
+							href="../categoria.do?action=listOne"
+							paramId="id" paramProperty="categoria.catId"/>
+
 			<display:column title="Federado"  property="jugFederado"     sortable="true" headerClass="sortable" />
 			
 			<display:column title="Nombre"    property="jugNombre"       sortable="true" headerClass="sortable" />

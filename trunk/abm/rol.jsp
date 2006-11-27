@@ -19,7 +19,7 @@
 
         function validar()
         {
-			desc       = document.FederacionBean.descripcion.value;
+			desc       = document.RolBean.descripcion.value;
 
 			if(desc == "")
 			{
@@ -29,6 +29,21 @@
 	    	return true;
     	}
 
+	// ]]>
+	</script>
+
+	<script language="javascript">
+	// <![CDATA[
+		function modificar()
+		{
+			document.forms[0].action.value = "setUpdate";
+			document.forms[0].submit();
+		}
+		function borrar(form)
+		{
+			document.forms[0].action.value = "delete";
+			document.forms[0].submit();
+		}
 	// ]]>
 	</script>
 
@@ -49,6 +64,12 @@
 				Modificar
 			</legend>
 		</logic:equal>
+		<logic:equal name="RolBean" property="metodo" value="mostrar">
+			<legend>
+				Mostrar
+			</legend>
+		</logic:equal>
+
 
 		<html:form action="/rol" method="POST" onsubmit="return validar();"
 			target="_self">
@@ -67,8 +88,13 @@
 						Descripcion:
 					</td>
 					<td>
-						<html:text property="descripcion" name="RolBean"/>
-						<html:errors property="descripcion" />
+						<logic:notEqual name="RolBean" property="metodo" value="mostrar">
+							<html:text property="descripcion" name="RolBean"/>
+							<html:errors property="descripcion" />
+						</logic:notEqual>
+						<logic:equal name="RolBean" property="metodo" value="mostrar">
+							<bean:write name="RolBean" property="descripcion" />
+						</logic:equal>
 					</td>
 				</tr>
 
@@ -85,6 +111,11 @@
 								value="modificacion">
 								<html:hidden property="action" value="update" />
 								<input type="submit" value="Modificar" />
+							</logic:equal>
+							<logic:equal name="RolBean" property="metodo" value="mostrar">
+								<input type="button" onClick="javascript:borrar()"    value="Borrar">
+								<input type="button" onClick="javascript:modificar()" value="Modificar">
+								<input type="hidden" name="action" value=""/>
 							</logic:equal>
 						</center>
 					<td>

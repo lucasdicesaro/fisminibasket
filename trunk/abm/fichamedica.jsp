@@ -19,13 +19,50 @@
 
         function validar()
         {
-			desc       = document.FederacionBean.descripcion.value;
+			atn       = document.FichaMedicaBean.antecedentes.value;
+			car       = document.FichaMedicaBean.cardiopatias.value;
+			ale       = document.FichaMedicaBean.alergias.value;
+			his       = document.FichaMedicaBean.historial.value;
+			est       = document.FichaMedicaBean.estado.value;
+			med       = document.FichaMedicaBean.medico.value;
+			jug       = document.FichaMedicaBean.jugador.value;
 
-			if(desc == "")
+			if(atn == "")
 			{
-				alert("Complete el campo Descripcion");
+				alert("Complete el campo Antecedentes");
 				return false;
 			}
+			if(car == "")
+			{
+				alert("Complete el campo Cardiopatias");
+				return false;
+			}
+			if(ale == "")
+			{
+				alert("Complete el campo Alergias");
+				return false;
+			}
+			if(his == "")
+			{
+				alert("Complete el campo Historial");
+				return false;
+			}
+			if(est == "")
+			{
+				alert("Complete el campo Estado");
+				return false;
+			}
+			if(med == "")
+			{
+				alert("Complete el campo Medico");
+				return false;
+			}
+			if(jug == "")
+			{
+				alert("Complete el campo Jugador");
+				return false;
+			}
+
 	    	return true;
     	}
 

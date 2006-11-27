@@ -19,11 +19,29 @@
 
         function validar()
         {
-			desc       = document.FederacionBean.descripcion.value;
+			fecha       = document.AvisoBean.fecha.value;
+			estado      = document.AvisoBean.estado.value;
+			tipo        = document.AvisoBean.tipo.value;
+			jugador     = document.AvisoBean.jugador.value;
 
-			if(desc == "")
+			if(fecha == "")
 			{
-				alert("Complete el campo Descripcion");
+				alert("Complete el campo Fecha");
+				return false;
+			}
+			if(estado == "")
+			{
+				alert("Complete el campo Estado");
+				return false;
+			}
+			if(tipo == "")
+			{
+				alert("Complete el campo Tipo");
+				return false;
+			}
+			if(jugador == "")
+			{
+				alert("Complete el campo Jugador");
 				return false;
 			}
 	    	return true;
@@ -47,6 +65,11 @@
 		<logic:equal name="AvisoBean" property="metodo" value="modificacion">
 			<legend>
 				Modificar
+			</legend>
+		</logic:equal>
+		<logic:equal name="AvisoBean" property="metodo" value="modificacion">
+			<legend>
+				Mostrar
 			</legend>
 		</logic:equal>
 
@@ -115,6 +138,11 @@
 								value="modificacion">
 								<html:hidden property="action" value="update" />
 								<input type="submit" value="Modificar" />
+							</logic:equal>
+							<logic:equal name="AvisoBean" property="metodo" value="mostrar">
+								<input type="button" onClick="javascript:borrar()"    value="Borrar">
+								<input type="button" onClick="javascript:modificar()" value="Modificar">
+								<input type="hidden" name="action" value=""/>
 							</logic:equal>
 						</center>
 					<td>

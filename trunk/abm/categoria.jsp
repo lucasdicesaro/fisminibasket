@@ -19,11 +19,29 @@
 
         function validar()
         {
-			desc       = document.FederacionBean.descripcion.value;
+			desde       = document.CategoriaBean.desde.value;
+		   	hasta       = document.CategoriaBean.hasta.value;
+		    descripcion	= document.CategoriaBean.descripcion.value;
+			minimo      = document.CategoriaBean.minimo.value;
 
-			if(desc == "")
+			if(desde == "")
+			{
+				alert("Complete el campo Desde");
+				return false;
+			}
+			if(hasta == "")
+			{
+				alert("Complete el campo Hasta");
+				return false;
+			}
+			if(descripcion == "")
 			{
 				alert("Complete el campo Descripcion");
+				return false;
+			}
+			if(minimo == "")
+			{
+				alert("Complete el campo Minimo");
 				return false;
 			}
 	    	return true;
@@ -31,6 +49,22 @@
 
 	// ]]>
 	</script>
+
+	<script language="javascript">
+	// <![CDATA[
+		function modificar()
+		{
+			document.forms[0].action.value = "setUpdate";
+			document.forms[0].submit();
+		}
+		function borrar(form)
+		{
+			document.forms[0].action.value = "delete";
+			document.forms[0].submit();
+		}
+	// ]]>
+	</script>
+	
 
 	<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
 	<META HTTP-EQUIV="Expires" CONTENT="-1">
@@ -47,6 +81,11 @@
 		<logic:equal name="CategoriaBean" property="metodo" value="modificacion">
 			<legend>
 				Modificar
+			</legend>
+		</logic:equal>
+		<logic:equal name="CategoriaBean" property="metodo" value="mostrar">
+			<legend>
+				Mostrar
 			</legend>
 		</logic:equal>
 
@@ -67,8 +106,13 @@
 						Desde:
 					</td>
 					<td>
-						<html:text property="desde" name="CategoriaBean"/>
-						<html:errors property="desde" />
+						<logic:notEqual name="CategoriaBean" property="metodo" value="mostrar">
+							<html:text property="desde" name="CategoriaBean"/>
+							<html:errors property="desde" />
+						</logic:notEqual>
+						<logic:equal name="CategoriaBean" property="metodo" value="mostrar">
+							<bean:write name="CategoriaBean" property="desde" />
+						</logic:equal>
 					</td>
 				</tr>
 
@@ -77,8 +121,13 @@
 						Hasta:
 					</td>
 					<td>
-						<html:text property="hasta" name="CategoriaBean"/>
-						<html:errors property="hasta" />
+						<logic:notEqual name="CategoriaBean" property="metodo" value="mostrar">
+							<html:text property="hasta" name="CategoriaBean"/>
+							<html:errors property="hasta" />
+						</logic:notEqual>
+						<logic:equal name="CategoriaBean" property="metodo" value="mostrar">
+							<bean:write name="CategoriaBean" property="hasta" />
+						</logic:equal>
 					</td>
 				</tr>
 
@@ -87,8 +136,13 @@
 						Descripcion:
 					</td>
 					<td>
-						<html:text property="descripcion" name="CategoriaBean" />
-						<html:errors property="descripcion" />
+						<logic:notEqual name="CategoriaBean" property="metodo" value="mostrar">
+							<html:text property="descripcion" name="CategoriaBean" />
+							<html:errors property="descripcion" />
+						</logic:notEqual>
+						<logic:equal name="CategoriaBean" property="metodo" value="mostrar">
+							<bean:write name="CategoriaBean" property="descripcion" />
+						</logic:equal>
 					</td>
 				</tr>
 
@@ -97,8 +151,13 @@
 						Minimo:
 					</td>
 					<td>
-						<html:text property="minimo" name="CategoriaBean" />
-						<html:errors property="minimo" />
+						<logic:notEqual name="CategoriaBean" property="metodo" value="mostrar">
+							<html:text property="minimo" name="CategoriaBean" />
+							<html:errors property="minimo" />
+						</logic:notEqual>
+						<logic:equal name="CategoriaBean" property="metodo" value="mostrar">
+							<bean:write name="CategoriaBean" property="minimo" />
+						</logic:equal>
 					</td>
 				</tr>
 
@@ -115,6 +174,11 @@
 								value="modificacion">
 								<html:hidden property="action" value="update" />
 								<input type="submit" value="Modificar" />
+							</logic:equal>
+							<logic:equal name="CategoriaBean" property="metodo" value="mostrar">
+								<input type="button" onClick="javascript:borrar()"    value="Borrar">
+								<input type="button" onClick="javascript:modificar()" value="Modificar">
+								<input type="hidden" name="action" value=""/>
 							</logic:equal>
 						</center>
 					<td>
