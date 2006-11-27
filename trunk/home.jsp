@@ -14,30 +14,11 @@
 
 <%@ include file="/log/log.inc"%>
 
-<html:html locale="true">
-	<head>
-		<title>MiniBasket Administrador</title>
-		<html:base />
-	</head>
-	<body bgcolor="white">
-	    ABMs <BR />
-		<a href="/MB/aviso.do?action=listAll">Aviso</a> <BR />
-		<a href="/MB/categoria.do?action=listAll">Categoria</a> <BR />
-		<a href="/MB/club.do?action=listAll">Club</a> <BR />
-		<a href="/MB/federacion.do?action=listAll">Federacion</a> <BR />
-		<a href="/MB/fichamedica.do?action=listAll">Ficha Medica</a> <BR />
-		<a href="/MB/jugador.do?action=listAll">Jugador</a> <BR />
-		<a href="/MB/medico.do?action=listAll">Medico</a> <BR />
-		<a href="/MB/permiso.do?action=listAll">Permiso</a> <BR />
-		<a href="/MB/rol.do?action=listAll">Rol</a> <BR />
-		<a href="/MB/rolpermiso.do?action=listAll">Rol-Permiso</a> <BR />
-		<a href="/MB/usuario.do?action=listAll">Usuario</a> <BR />
+<html:html>
+	
+	<frameset cols="158,*" frameborder="no" >
+	  	<frame noresize="noresize" src="indicehome.jsp" scrolling="no" />
+	  	<frame src="index.jsp" name="showframe" />
+	</frameset>
 
-	    Reportes <BR />
-		<a href="/MB/today.do?action=listAvisosFaltantes">Today Avisos Faltantes</a> <BR />
-		<a href="/MB/today.do?action=listFichasMedicas">Today Fichas Medicas</a> <BR />
-
-		Falta<BR />
-		 - Darle estilo (diseño)<BR />
-	</body>
 </html:html>
