@@ -16,7 +16,7 @@
 
 <html:html locale="true">
 	<head>
-		<title></title>
+		<title>MiniBasket Administrador</title>
 		<html:base />
 	</head>
 	<body bgcolor="white">
@@ -30,6 +30,7 @@
 		<a href="/MB/medico.do?action=listAll">Medico</a> <BR />
 		<a href="/MB/permiso.do?action=listAll">Permiso</a> <BR />
 		<a href="/MB/rol.do?action=listAll">Rol</a> <BR />
+		<a href="/MB/rolpermiso.do?action=listAll">Rol-Permiso</a> <BR />
 		<a href="/MB/usuario.do?action=listAll">Usuario</a> <BR />
 
 	    Reportes <BR />
@@ -37,10 +38,6 @@
 		<a href="/MB/today.do?action=listFichasMedicas">Today Fichas Medicas</a> <BR />
 
 		Falta<BR />
-		 - Drill down en los reportes<BR />
-		 - Crear un registro por cada operacion en la tabla y asignarlos por roles<BR />
-		 - Completar la validacion de javascript en los jsp<BR />
-		 - Darle estilo: hacer la home y los css's<BR />
-		 - Hacer los tests<BR />
+		 - Darle estilo (diseño)<BR />
 	</body>
 </html:html>
