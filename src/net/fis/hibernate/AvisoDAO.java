@@ -25,7 +25,10 @@ public class AvisoDAO extends BaseHibernateDAO
         log.debug("saving Aviso instance");
         try
         {
+            Transaction tx = getSession().beginTransaction();
             getSession().save(transientInstance);
+            getSession().flush();
+            tx.commit();
             log.debug("save successful");
         }
         catch (RuntimeException re)
@@ -40,7 +43,10 @@ public class AvisoDAO extends BaseHibernateDAO
         log.debug("deleting Aviso instance");
         try
         {
+            Transaction tx = getSession().beginTransaction();
             getSession().delete(persistentInstance);
+            getSession().flush();
+            tx.commit();
             log.debug("delete successful");
         }
         catch (RuntimeException re)

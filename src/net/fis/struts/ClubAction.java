@@ -93,6 +93,7 @@ public class ClubAction extends DispatchAction
 
         daf.set("id", String.valueOf(club.getId().getClubId()));
         daf.set("federacion", String.valueOf(club.getId().getFederacion().getFederacionId()));
+        daf.set("fedDesc", String.valueOf(club.getId().getFederacion().getFedDescripcion()));
         daf.set("descripcion", String.valueOf(club.getCluDescripcion()));
         daf.set("federado", String.valueOf(club.getCluFederado()));
         
@@ -188,7 +189,6 @@ public class ClubAction extends DispatchAction
 
         ClubDAO clubDAO = new ClubDAO();
         Club club = clubDAO.findByClubId(new Integer((String) PropertyUtils.getSimpleProperty(form, "id")));
-
         clubDAO.delete(club);
 
         ActionForward forward = mapping.findForward("success");
@@ -259,8 +259,7 @@ public class ClubAction extends DispatchAction
      */
     public ActionForward unespecified(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception
     {
-
-        return (mapping.findForward("error"));
+        return listAll(mapping, form, request, response);
     }
 
 }

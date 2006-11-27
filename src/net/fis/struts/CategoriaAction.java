@@ -179,10 +179,8 @@ public class CategoriaAction extends DispatchAction
     public ActionForward delete(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception
     {
 
-        Categoria categoria = new Categoria();
-        categoria.setCatId(new Integer((String) PropertyUtils.getSimpleProperty(form, "id")));
-
         CategoriaDAO categoriaDAO = new CategoriaDAO();
+        Categoria categoria = categoriaDAO.findById(new Integer((String) PropertyUtils.getSimpleProperty(form, "id")));
         categoriaDAO.delete(categoria);
 
         ActionForward forward = mapping.findForward("success");
@@ -252,8 +250,7 @@ public class CategoriaAction extends DispatchAction
      */
     public ActionForward unespecified(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception
     {
-
-        return (mapping.findForward("error"));
+        return listAll(mapping, form, request, response);
     }
 
 }

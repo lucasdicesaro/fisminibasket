@@ -46,21 +46,25 @@ var ThemeBg="";//Background image of Calendar window.
 function NewCal(pCtrl,pFormat,pShowTime,pTimeMode)
 {
 	Cal=new Calendar(dtToday);
-	if ((pShowTime!=null) && (pShowTime))
+	if ((pShowTime!==null) && (pShowTime))
 	{
 		Cal.ShowTime=true;
-		if ((pTimeMode!=null) &&((pTimeMode=='12')||(pTimeMode=='24')))
+		if ((pTimeMode!==null) &&((pTimeMode=='12')||(pTimeMode=='24')))
 		{
 			TimeMode=pTimeMode;
 		}		
 	}	
-	if (pCtrl!=null)
+	if (pCtrl!==null)
+	{
 		Cal.Ctrl=pCtrl;
-	if (pFormat!=null)
+	}
+	if (pFormat!==null)
+	{
 		Cal.Format=pFormat.toUpperCase();
+	}
 	
 	exDateTime=document.getElementById(pCtrl).value;
-	if (exDateTime!="")//Parse Date String
+	if (exDateTime!=="")//Parse Date String
 	{
 		var Sp1;//Index of Date Separator 1
 		var Sp2;//Index of Date Separator 2 

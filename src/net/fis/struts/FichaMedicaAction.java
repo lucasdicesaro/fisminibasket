@@ -188,10 +188,8 @@ public class FichaMedicaAction extends DispatchAction
     public ActionForward delete(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception
     {
 
-        FichaMedica fichaMedica = new FichaMedica();
-        fichaMedica.setFmId(new Integer((String) PropertyUtils.getSimpleProperty(form, "id")));
-
         FichaMedicaDAO fichaMedicaDAO = new FichaMedicaDAO();
+        FichaMedica fichaMedica = fichaMedicaDAO.findById(new Integer((String) PropertyUtils.getSimpleProperty(form, "id")));
         fichaMedicaDAO.delete(fichaMedica);
 
         ActionForward forward = mapping.findForward("success");
@@ -265,8 +263,7 @@ public class FichaMedicaAction extends DispatchAction
      */
     public ActionForward unespecified(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception
     {
-
-        return (mapping.findForward("error"));
+        return listAll(mapping, form, request, response);
     }
 
 }

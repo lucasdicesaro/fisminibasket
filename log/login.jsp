@@ -15,13 +15,20 @@
 
         function validar()
         {
-			desc       = document.FederacionBean.descripcion.value;
+			id       = document.UsuarioBean.id.value;
+			password = document.UsuarioBean.password.value;
 
-			if(desc == "")
+			if(id == "")
 			{
-				alert("Complete el campo Descripcion");
+				alert("Complete el campo Id");
 				return false;
 			}
+			if(password == "")
+			{
+				alert("Complete el campo Password");
+				return false;
+			}
+
 	    	return true;
     	}
 
@@ -30,7 +37,6 @@
 
 	<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
 	<META HTTP-EQUIV="Expires" CONTENT="-1">
-
 </head>
 <body bgcolor="white">
 
@@ -40,8 +46,7 @@
 		</legend>
 
 		<br>
-		<html:form action="/usuario" method="POST" onsubmit="return validar();"
-			target="_self">
+		<html:form action="/usuario" method="POST" onsubmit="return validar();" target="_self">
 			<table>
 				<tr>
 					<td>

@@ -178,11 +178,8 @@ public class AvisoAction extends DispatchAction
      */
     public ActionForward delete(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception
     {
-
-        Aviso aviso = new Aviso();
-        aviso.setAviId(new Integer((String) PropertyUtils.getSimpleProperty(form, "id")));
-
         AvisoDAO avisoDAO = new AvisoDAO();
+        Aviso aviso = avisoDAO.findById(new Integer((String) PropertyUtils.getSimpleProperty(form, "id")));
         avisoDAO.delete(aviso);
 
         ActionForward forward = mapping.findForward("success");
@@ -251,8 +248,7 @@ public class AvisoAction extends DispatchAction
      */
     public ActionForward unespecified(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception
     {
-
-        return (mapping.findForward("error"));
+        return listAll(mapping, form, request, response);
     }
 
 }

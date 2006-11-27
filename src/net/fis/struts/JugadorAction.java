@@ -204,10 +204,8 @@ public class JugadorAction extends DispatchAction
     public ActionForward delete(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception
     {
 
-        Jugador jugador = new Jugador();
-        jugador.setJugId(new Integer((String) PropertyUtils.getSimpleProperty(form, "id")));
-
         JugadorDAO jugadorDAO = new JugadorDAO();
+        Jugador jugador = jugadorDAO.findById(new Integer((String) PropertyUtils.getSimpleProperty(form, "id")));
         jugadorDAO.delete(jugador);
 
         ActionForward forward = mapping.findForward("success");
@@ -286,8 +284,7 @@ public class JugadorAction extends DispatchAction
      */
     public ActionForward unespecified(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception
     {
-
-        return (mapping.findForward("error"));
+        return listAll(mapping, form, request, response);
     }
 
 }
