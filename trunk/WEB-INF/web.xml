@@ -31,9 +31,6 @@
 	</session-config>
 
 
-	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-	</welcome-file-list>
 
 	<taglib>
 		<taglib-uri>/WEB-INF/struts-bean.tld</taglib-uri>
