@@ -19,11 +19,29 @@
 
         function validar()
         {
-			desc       = document.FederacionBean.descripcion.value;
+			rol      = document.UsuarioBean.rol.value;
+			nombre   = document.UsuarioBean.nombre.value;
+			apellido = document.UsuarioBean.apellido.value;
+			password = document.UsuarioBean.password.value;
 
-			if(desc == "")
+			if(rol == "")
 			{
-				alert("Complete el campo Descripcion");
+				alert("Complete el campo Rol");
+				return false;
+			}
+			if(nombre == "")
+			{
+				alert("Complete el campo Nombre");
+				return false;
+			}
+			if(apellido == "")
+			{
+				alert("Complete el campo Apellido");
+				return false;
+			}
+			if(password == "")
+			{
+				alert("Complete el campo password");
 				return false;
 			}
 	    	return true;

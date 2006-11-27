@@ -7,8 +7,8 @@
 <html:html locale="true">
 <head>
 	<title>
-		<logic:equal name="RolBean" property="metodo" value="alta">Crear</logic:equal>
-		<logic:equal name="RolBean" property="metodo" value="modificacion">Modificar</logic:equal>
+		<logic:equal name="PermisoBean" property="metodo" value="alta">Crear</logic:equal>
+		<logic:equal name="PermisoBean" property="metodo" value="modificacion">Modificar</logic:equal>
 	</title>
 	<html:base />
 
@@ -19,7 +19,7 @@
 
         function validar()
         {
-			desc       = document.FederacionBean.descripcion.value;
+			desc       = document.PermisoBean.descripcion.value;
 
 			if(desc == "")
 			{
