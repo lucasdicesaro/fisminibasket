@@ -34,6 +34,7 @@
       <form-property name = "id"          type = "java.lang.String" />
       <form-property name = "metodo"      type = "java.lang.String" />
       <form-property name = "federacion"  type = "java.lang.String" />
+      <form-property name = "fedDesc"     type = "java.lang.String" />
       <form-property name = "descripcion" type = "java.lang.String" />
       <form-property name = "federado"    type = "java.lang.String" />
     </form-bean>
@@ -76,6 +77,7 @@
     <form-bean name="RolBean" type="org.apache.struts.action.DynaActionForm">
       <form-property name = "id"          type = "java.lang.String" />
       <form-property name = "descripcion" type = "java.lang.String" />
+      <form-property name = "metodo"      type = "java.lang.String" />
     </form-bean>
     
     <form-bean name="UsuarioBean" type="org.apache.struts.action.DynaActionForm">
@@ -83,17 +85,31 @@
       <form-property name = "rol"      type = "java.lang.String" />
       <form-property name = "nombre"   type = "java.lang.String" />
       <form-property name = "apellido" type = "java.lang.String" />
-      <form-property name = "password"  type = "java.lang.String" />
+      <form-property name = "password" type = "java.lang.String" />
+      <form-property name = "metodo"   type = "java.lang.String" />
     </form-bean>
     
     <form-bean name="PermisoBean" type="org.apache.struts.action.DynaActionForm">
       <form-property name = "id"          type = "java.lang.String" />
       <form-property name = "descripcion" type = "java.lang.String" />
+      <form-property name = "metodo"      type = "java.lang.String" />
     </form-bean>    
+
+    <form-bean name="RolPermisoBean" type="org.apache.struts.action.DynaActionForm">
+      <form-property name = "rol"         type = "java.lang.String" />
+      <form-property name = "permiso"     type = "java.lang.String" />
+      <form-property name = "metodo"      type = "java.lang.String" />
+    </form-bean>
 
   </form-beans>
 
-  <global-exceptions />
+	<global-exceptions>
+	  <exception 
+           type="java.lang.Exception"
+           key="error.default" 
+           path="/jsp/error.jsp"/>
+	</global-exceptions>
+
 
 	<global-forwards>
     	<forward name="index" path="/index.jsp" />
@@ -109,10 +125,6 @@
             scope     = "request"
             parameter = "action">
 
-        <exception type = "java.lang.Exception" 
-                   key  = "error.security" 
-                   path = "/login.do"/> 
-
 		<forward name = "federaciones"
                  path = "/abm/federaciones.jsp" />
 
@@ -126,7 +138,7 @@
                  path = "/abm/federacion.jsp" />
 
         <forward name = "success"
-                 path = "/jsp/success.jsp" />
+                 path = "/federacion.do?action=listAll" />
 
         <forward name = "error"
                  path = "/jsp/error.jsp" />
@@ -138,9 +150,6 @@
             type      = "net.fis.struts.MedicoAction"
             scope     = "request"
             parameter = "action">
-        <exception type = "java.lang.Exception" 
-                   key  = "error.security" 
-                   path = "/login.do"/> 
 
 		<forward name = "medicos"
                  path = "/abm/medicos.jsp" />
@@ -155,7 +164,7 @@
                  path = "/abm/medico.jsp" />
 
         <forward name = "success"
-                 path = "/jsp/success.jsp" />
+                 path = "/medico.do?action=listAll" />
 
         <forward name = "error"
                  path = "/jsp/error.jsp" />
@@ -167,9 +176,6 @@
             type      = "net.fis.struts.CategoriaAction"
             scope     = "request"
             parameter = "action">
-        <exception type = "java.lang.Exception" 
-                   key  = "error.security" 
-                   path = "/login.do"/> 
 
 		<forward name = "categorias"
                  path = "/abm/categorias.jsp" />
@@ -184,7 +190,7 @@
                  path = "/abm/categoria.jsp" />
 
         <forward name = "success"
-                 path = "/jsp/success.jsp" />
+                 path = "/categoria.do?action=listAll" />
 
         <forward name = "error"
                  path = "/jsp/error.jsp" />
@@ -196,10 +202,6 @@
             type      = "net.fis.struts.ClubAction"
             scope     = "request"
             parameter = "action">
-
-        <exception type = "java.lang.Exception" 
-                   key  = "error.security" 
-                   path = "/login.do"/> 
 
 		<forward name = "clubes"
                  path = "/abm/clubes.jsp" />
@@ -214,7 +216,7 @@
                  path = "/abm/club.jsp" />
 
         <forward name = "success"
-                 path = "/jsp/success.jsp" />
+                 path = "/club.do?action=listAll" />
 
         <forward name = "error"
                  path = "/jsp/error.jsp" />
@@ -226,10 +228,6 @@
             type      = "net.fis.struts.JugadorAction"
             scope     = "request"
             parameter = "action">
-
-        <exception type = "java.lang.Exception" 
-                   key  = "error.security" 
-                   path = "/login.do"/> 
 
 		<forward name = "jugadores"
                  path = "/abm/jugadores.jsp" />
@@ -244,7 +242,7 @@
                  path = "/abm/jugador.jsp" />
 
         <forward name = "success"
-                 path = "/jsp/success.jsp" />
+                 path = "/jugador.do?action=listAll" />
 
         <forward name = "error"
                  path = "/jsp/error.jsp" />
@@ -255,10 +253,6 @@
             type      = "net.fis.struts.FichaMedicaAction"
             scope     = "request"
             parameter = "action">
-
-        <exception type = "java.lang.Exception" 
-                   key  = "error.security" 
-                   path = "/login.do"/> 
 
 		<forward name = "fichasMedicas"
                  path = "/abm/fichasmedicas.jsp" />
@@ -273,7 +267,7 @@
                  path = "/abm/fichamedica.jsp" />
 
         <forward name = "success"
-                 path = "/jsp/success.jsp" />
+                 path = "/fichamedica.do?action=listAll" />
 
         <forward name = "error"
                  path = "/jsp/error.jsp" />
@@ -299,7 +293,7 @@
                  path = "/abm/aviso.jsp" />
 
         <forward name = "success"
-                 path = "/jsp/success.jsp" />
+                 path = "/aviso.do?action=listAll" />
 
         <forward name = "error"
                  path = "/jsp/error.jsp" />
@@ -324,7 +318,7 @@
 
 
         <forward name = "success"
-                 path = "/jsp/success.jsp" />
+                 path = "/today.do?action=listAll" />
 
         <forward name = "error"
                  path = "/jsp/error.jsp" />
@@ -358,7 +352,7 @@
                  path = "/log/login.jsp" />
 
         <forward name = "success"
-                 path = "/jsp/success.jsp" />
+                 path = "/usuario.do?action=listAll" />
 
         <forward name = "error"
                  path = "/jsp/error.jsp" />
@@ -385,7 +379,7 @@
                  path = "/abm/rol.jsp" />
 
         <forward name = "success"
-                 path = "/jsp/success.jsp" />
+                 path = "/rol.do?action=listAll" />
 
         <forward name = "error"
                  path = "/jsp/error.jsp" />
@@ -412,12 +406,40 @@
                  path = "/abm/permiso.jsp" />
 
         <forward name = "success"
-                 path = "/jsp/success.jsp" />
+                 path = "/permiso.do?action=listAll" />
 
         <forward name = "error"
                  path = "/jsp/error.jsp" />
 
     </action>
+
+	<action name      = "RolPermisoBean"
+            input     = "/abm/rolpermiso.jsp"
+            path      = "/rolpermiso"
+            type      = "net.fis.struts.RolPermisoAction"
+            scope     = "request"
+            parameter = "action">
+
+		<forward name = "rolespermisos"
+                 path = "/abm/rolespermisos.jsp" />
+
+        <forward name = "select"
+                 path = "/abm/rolpermiso.jsp" />
+
+        <forward name = "update"
+                 path = "/abm/rolpermiso.jsp" />
+
+        <forward name = "create"
+                 path = "/abm/rolpermiso.jsp" />
+
+        <forward name = "success"
+                 path = "/rolpermiso.do?action=listAll" />
+
+        <forward name = "error"
+                 path = "/jsp/error.jsp" />
+
+    </action>
+
 
 
   </action-mappings>
