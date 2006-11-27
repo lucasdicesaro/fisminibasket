@@ -11,8 +11,6 @@
   <StrutsActivity path="/usuario.do" location="1550,550" dimension="172,88" />
   <StrutsActivity path="/rol.do" location="950,750" dimension="151,88" />
   <StrutsActivity path="/permiso.do" location="950,950" dimension="173,88" />
-  <StrutsActivity path="/rolpermiso.do" location="1550,150" dimension="188,88" />
-  <StrutsActivity path="index;6" location="350,250" dimension="87,75" />
   <StrutsActivity path="login;6" location="650,250" dimension="101,75" />
   <StrutsActivity path="/abm/federacion.jsp" location="225,15" dimension="126,49" />
   <StrutsActivity path="/abm/federaciones.jsp" location="650,550" dimension="137,49" />
@@ -41,10 +39,7 @@
   <StrutsActivity path="/abm/roles.jsp" location="1850,550" dimension="98,49" />
   <StrutsActivity path="/abm/permisos.jsp" location="1850,650" dimension="117,49" />
   <StrutsActivity path="/abm/permiso.jsp" location="1550,950" dimension="112,49" />
-  <StrutsActivity path="/permiso" location="650,1050" dimension="70,49" />
   <StrutsActivity path="/abm/perimiso.jsp" location="1250,850" dimension="114,49" />
-  <StrutsActivity path="/abm/rolespermisos.jsp" location="1850,950" dimension="140,49" />
-  <StrutsActivity path="/abm/rolpermiso.jsp" location="50,1050" dimension="124,49" />
   <StrutsActivity path="/index.jsp" location="350,950" dimension="77,49" />
   <StrutsActivity path="/bus/usuairos.jsp" location="50,850" dimension="112,49" />
   <StrutsActivity path="/rol/roles.jsp" location="650,850" dimension="90,49" />
@@ -56,25 +51,12 @@
   <StrutsActivity path="/abm/fechamedica.jsp" location="950,650" dimension="135,49" />
   <StrutsActivity path="/rol/permisos.jsp" location="1250,950" dimension="109,49" />
   <StrutsActivity path="/bus/usuarios.jsp" location="1850,750" dimension="112,49" />
-  <StrutsActivity path="" location="350,1050" dimension="29,49" />
-  <StrutsActivity path="permiso.do&amp;action=listAll" location="1250,1050" dimension="150,49" />
-  <StrutsActivity path="/permiso.do&amp;action=listAll" location="1550,1050" dimension="154,49" />
+  <StrutsActivity path="/indicehome.jsp" location="1850,950" dimension="104,49" />
   <StrutsTransition id="/jugador.do,select,/abm/jugador.jsp,1" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="855,105" />
       <AbsolutePoint location="855,39" />
       <AbsolutePoint location="870,39" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/medico.do,success,/medico.do,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="-43,105" />
-      <AbsolutePoint location="-43,85" />
-      <AbsolutePoint location="-429,85" />
-      <AbsolutePoint location="-429,217" />
-      <AbsolutePoint location="181,217" />
-      <AbsolutePoint location="181,150" />
-      <AbsolutePoint location="61,150" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/medico.do,medicos,/abm/medicos.jsp,1" routingType="0">
@@ -85,23 +67,24 @@
       <AbsolutePoint location="1306,450" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/permiso.do,success,/permiso.do&amp;action=listAll,1" routingType="0">
+  <StrutsTransition id="/usuario.do,usuarios,/abm/usuarios.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="1123,1036" />
-      <AbsolutePoint location="1627,1036" />
-      <AbsolutePoint location="1627,1050" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/fichamedica.do,select,/abm/fichamedica.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1295,105" />
-      <AbsolutePoint location="1295,64" />
+      <AbsolutePoint location="1722,584" />
+      <AbsolutePoint location="1737,584" />
+      <AbsolutePoint location="1737,874" />
+      <AbsolutePoint location="1850,874" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/abm/categoria.jsp,null,/categoria.do,2" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="1155,64" />
       <AbsolutePoint location="1155,105" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fichamedica.do,select,/abm/fichamedica.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1295,105" />
+      <AbsolutePoint location="1295,64" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/federacion.do,create,/abm/federacion.jsp,1" routingType="0">
@@ -112,19 +95,25 @@
   </StrutsTransition>
   <StrutsTransition id="/today.do,avisos,/bus/avisos.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="1401,738" />
-      <AbsolutePoint location="1401,1439" />
-      <AbsolutePoint location="-101,1439" />
-      <AbsolutePoint location="-101,835" />
-      <AbsolutePoint location="371,835" />
-      <AbsolutePoint location="371,799" />
+      <AbsolutePoint location="1416,694" />
+      <AbsolutePoint location="1466,694" />
+      <AbsolutePoint location="1466,1053" />
+      <AbsolutePoint location="540,1053" />
+      <AbsolutePoint location="540,769" />
+      <AbsolutePoint location="452,769" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/abm/perimiso.jsp,null,/permiso.do,2" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="1250,865" />
-      <AbsolutePoint location="1086,865" />
-      <AbsolutePoint location="1086,950" />
+      <AbsolutePoint location="1250,874" />
+      <AbsolutePoint location="1056,874" />
+      <AbsolutePoint location="1056,950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/categoria.do,create,/abm/categoria.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1125,105" />
+      <AbsolutePoint location="1125,64" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/categoria.do,update,/abm/categoria.jsp,1" routingType="0">
@@ -133,16 +122,37 @@
       <AbsolutePoint location="1185,64" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/abm/fichamedica.jsp,null,/fichamedica.do,2" routingType="0">
+  <StrutsTransition id="/jugador.do,create,/abm/jugador.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="1355,64" />
-      <AbsolutePoint location="1355,105" />
+      <AbsolutePoint location="896,105" />
+      <AbsolutePoint location="896,64" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aviso.do,error,/jsp/error.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="131,250" />
+      <AbsolutePoint location="131,79" />
+      <AbsolutePoint location="1030,79" />
+      <AbsolutePoint location="1030,450" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/club.do,update,/abm/club.jsp,1" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="707,105" />
       <AbsolutePoint location="707,64" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/abm/fichamedica.jsp,null,/fichamedica.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1355,64" />
+      <AbsolutePoint location="1355,105" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rol.do,create,/abm/rol.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,829" />
+      <AbsolutePoint location="393,829" />
+      <AbsolutePoint location="393,850" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/club.do,clubes,/abm/clubes.jsp,1" routingType="0">
@@ -152,6 +162,12 @@
       <AbsolutePoint location="593,714" />
       <AbsolutePoint location="102,714" />
       <AbsolutePoint location="102,699" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/abm/club.jsp,null,/club.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="677,64" />
+      <AbsolutePoint location="677,105" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/usuario.do,create,/abm/usuario.jsp,1" routingType="0">
@@ -168,13 +184,19 @@
       <AbsolutePoint location="156,574" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/federacion.do,success,/federacion.do,1" routingType="0">
+  <StrutsTransition id="/aviso.do,avisos,/abm/avisos.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="366,105" />
-      <AbsolutePoint location="366,-250" />
-      <AbsolutePoint location="452,-250" />
-      <AbsolutePoint location="452,119" />
-      <AbsolutePoint location="414,119" />
+      <AbsolutePoint location="212,330" />
+      <AbsolutePoint location="802,330" />
+      <AbsolutePoint location="802,574" />
+      <AbsolutePoint location="950,574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/usuario.do,valido,/indicehome.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1705,638" />
+      <AbsolutePoint location="1705,974" />
+      <AbsolutePoint location="1850,974" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/rol.do,success,/jsp/success.jsp,1" routingType="0">
@@ -187,12 +209,42 @@
       <AbsolutePoint location="51,599" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/permiso.do,success,permiso.do,1" routingType="0">
+  <StrutsTransition id="/today.do,fichas,/bus/fichas.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="950,984" />
-      <AbsolutePoint location="855,984" />
-      <AbsolutePoint location="855,1084" />
-      <AbsolutePoint location="1250,1084" />
+      <AbsolutePoint location="1333,738" />
+      <AbsolutePoint location="1333,814" />
+      <AbsolutePoint location="1222,814" />
+      <AbsolutePoint location="1222,1143" />
+      <AbsolutePoint location="641,1143" />
+      <AbsolutePoint location="641,769" />
+      <AbsolutePoint location="650,769" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rol.do,select,/abm/rol.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1101,784" />
+      <AbsolutePoint location="1526,784" />
+      <AbsolutePoint location="1526,-120" />
+      <AbsolutePoint location="-330,-120" />
+      <AbsolutePoint location="-330,944" />
+      <AbsolutePoint location="363,944" />
+      <AbsolutePoint location="363,899" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/usuario.do,valido,/home.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1705,638" />
+      <AbsolutePoint location="1705,1083" />
+      <AbsolutePoint location="88,1083" />
+      <AbsolutePoint location="88,999" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fichamedica.do,fichasMedicas,/abm/fichasmedicas.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1390,193" />
+      <AbsolutePoint location="1390,644" />
+      <AbsolutePoint location="720,644" />
+      <AbsolutePoint location="720,650" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/jugador.do,update,/abm/jugador.jsp,1" routingType="0">
@@ -207,13 +259,10 @@
       <AbsolutePoint location="228,64" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/fichamedica.do,success,/fichamedica.do,1" routingType="0">
+  <StrutsTransition id="/club.do,create,/abm/club.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="1303,105" />
-      <AbsolutePoint location="1303,85" />
-      <AbsolutePoint location="1641,85" />
-      <AbsolutePoint location="1641,127" />
-      <AbsolutePoint location="1417,127" />
+      <AbsolutePoint location="647,105" />
+      <AbsolutePoint location="647,64" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/abm/jugador.jsp,null,/jugador.do,2" routingType="0">
@@ -222,16 +271,24 @@
       <AbsolutePoint location="926,105" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/club.do,create,/abm/club.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="647,105" />
-      <AbsolutePoint location="647,64" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
   <StrutsTransition id="/fichamedica.do,update,/abm/fichamedica.jsp,1" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="1385,105" />
       <AbsolutePoint location="1385,64" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/usuario.do,update,/abm/usuario.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1606,638" />
+      <AbsolutePoint location="1606,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/categoria.do,success,/jsp/success.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1156,193" />
+      <AbsolutePoint location="1156,614" />
+      <AbsolutePoint location="103,614" />
+      <AbsolutePoint location="103,599" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="login;6,null,/log/login.jsp,1" routingType="0">
@@ -279,11 +336,10 @@
   </StrutsTransition>
   <StrutsTransition id="/usuario.do,success,/jsp/success.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="1550,606" />
-      <AbsolutePoint location="1472,606" />
-      <AbsolutePoint location="1472,-487" />
-      <AbsolutePoint location="-443,-487" />
-      <AbsolutePoint location="-443,552" />
+      <AbsolutePoint location="1650,550" />
+      <AbsolutePoint location="1650,-265" />
+      <AbsolutePoint location="-400,-265" />
+      <AbsolutePoint location="-400,552" />
       <AbsolutePoint location="50,552" />
     </AutomaticBendpoints>
   </StrutsTransition>
@@ -297,10 +353,11 @@
       <AbsolutePoint location="950,799" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/rolpermiso.do,update,/abm/rolpermiso.jsp,1" routingType="0">
+  <StrutsTransition id="/abm/usuario.jsp,null,/usuario.do,2" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="0,0" />
-      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="1660,774" />
+      <AbsolutePoint location="1675,774" />
+      <AbsolutePoint location="1675,638" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/abm/federacion.jsp,null,/federacion.do,2" routingType="0">
@@ -309,17 +366,36 @@
       <AbsolutePoint location="288,105" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/abm/usuario.jsp,null,/usuario.do,2" routingType="0">
+  <StrutsTransition id="/permiso.do,create,/abm/permiso.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="1660,774" />
-      <AbsolutePoint location="1675,774" />
-      <AbsolutePoint location="1675,638" />
+      <AbsolutePoint location="1123,1014" />
+      <AbsolutePoint location="1606,1014" />
+      <AbsolutePoint location="1606,999" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/permiso.do,success,/permiso,1" routingType="0">
+  <StrutsTransition id="/usuario.do,error,/jsp/error.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="1036,994" />
-      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="1636,550" />
+      <AbsolutePoint location="1636,271" />
+      <AbsolutePoint location="861,271" />
+      <AbsolutePoint location="861,452" />
+      <AbsolutePoint location="950,452" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/club.do,error,/jsp/error.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="765,193" />
+      <AbsolutePoint location="765,514" />
+      <AbsolutePoint location="996,514" />
+      <AbsolutePoint location="996,499" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/jugador.do,jugadores,/abm/jugadores.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="897,193" />
+      <AbsolutePoint location="897,744" />
+      <AbsolutePoint location="411,744" />
+      <AbsolutePoint location="411,699" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/jugador.do,error,/jsp/error.jsp,1" routingType="0">
@@ -345,333 +421,10 @@
       <AbsolutePoint location="695,999" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="index;6,null,/index.jsp,1" routingType="0">
+  <StrutsTransition id="/federacion.do,update,/abm/federacion.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="0,0" />
-      <AbsolutePoint location="0,0" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/permiso.do,permisos,/abm/permisos.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1123,1014" />
-      <AbsolutePoint location="1797,1014" />
-      <AbsolutePoint location="1797,664" />
-      <AbsolutePoint location="1850,664" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/aviso.do,success,/jsp/success.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="71,338" />
-      <AbsolutePoint location="71,550" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/rol.do,roles,/abm/roles.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1056,838" />
-      <AbsolutePoint location="1056,865" />
-      <AbsolutePoint location="765,865" />
-      <AbsolutePoint location="765,1353" />
-      <AbsolutePoint location="2065,1353" />
-      <AbsolutePoint location="2065,582" />
-      <AbsolutePoint location="1948,582" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/categoria.do,success,/categoria.do,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1080,105" />
-      <AbsolutePoint location="1080,-475" />
-      <AbsolutePoint location="1265,-475" />
-      <AbsolutePoint location="1265,149" />
-      <AbsolutePoint location="1248,149" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/rol.do,error,/jsp/error.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1088,750" />
-      <AbsolutePoint location="1088,492" />
-      <AbsolutePoint location="1043,492" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/permiso.do,select,/abm/permiso.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="950,984" />
-      <AbsolutePoint location="855,984" />
-      <AbsolutePoint location="855,1203" />
-      <AbsolutePoint location="2155,1203" />
-      <AbsolutePoint location="2155,914" />
-      <AbsolutePoint location="1606,914" />
-      <AbsolutePoint location="1606,950" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/abm/medico.jsp,null,/medico.do,2" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="9,64" />
-      <AbsolutePoint location="9,105" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/jugador.do,success,/jugador.do,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="985,105" />
-      <AbsolutePoint location="985,-202" />
-      <AbsolutePoint location="1048,-202" />
-      <AbsolutePoint location="1048,149" />
-      <AbsolutePoint location="1015,149" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/permiso.do,update,/abm/permiso.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1086,1038" />
-      <AbsolutePoint location="1086,1499" />
-      <AbsolutePoint location="1827,1499" />
-      <AbsolutePoint location="1827,974" />
-      <AbsolutePoint location="1662,974" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/fichamedica.do,create,/abm/fichamedica.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1325,105" />
-      <AbsolutePoint location="1325,64" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/fichamedica.do,error,/jsp/error.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1417,149" />
-      <AbsolutePoint location="1436,149" />
-      <AbsolutePoint location="1436,514" />
-      <AbsolutePoint location="1026,514" />
-      <AbsolutePoint location="1026,499" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/rol.do,success,/rol.do,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1025,750" />
-      <AbsolutePoint location="1025,714" />
-      <AbsolutePoint location="1118,714" />
-      <AbsolutePoint location="1118,784" />
-      <AbsolutePoint location="1101,784" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/jugador.do,success,/jsp/success.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="997,105" />
-      <AbsolutePoint location="997,-45" />
-      <AbsolutePoint location="-285,-45" />
-      <AbsolutePoint location="-285,510" />
-      <AbsolutePoint location="131,510" />
-      <AbsolutePoint location="131,550" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/medico.do,error,/jsp/error.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="-22,196" />
-      <AbsolutePoint location="-22,420" />
-      <AbsolutePoint location="966,420" />
-      <AbsolutePoint location="966,450" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/rolpermiso.do,create,/abm/rolpermiso.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="0,0" />
-      <AbsolutePoint location="0,0" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/usuario.do,usuarios,/abm/usuarios.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1722,614" />
-      <AbsolutePoint location="1753,614" />
-      <AbsolutePoint location="1753,874" />
-      <AbsolutePoint location="1850,874" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/categoria.do,create,/abm/categoria.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1125,105" />
-      <AbsolutePoint location="1125,64" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/jugador.do,create,/abm/jugador.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="896,105" />
-      <AbsolutePoint location="896,64" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/aviso.do,error,/jsp/error.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="131,250" />
-      <AbsolutePoint location="131,79" />
-      <AbsolutePoint location="1030,79" />
-      <AbsolutePoint location="1030,450" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/usuario.do,success,/usuario.do,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1606,550" />
-      <AbsolutePoint location="1606,465" />
-      <AbsolutePoint location="1797,465" />
-      <AbsolutePoint location="1797,584" />
-      <AbsolutePoint location="1722,584" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/abm/club.jsp,null,/club.do,2" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="677,64" />
-      <AbsolutePoint location="677,105" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/rol.do,create,/abm/rol.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="950,829" />
-      <AbsolutePoint location="393,829" />
-      <AbsolutePoint location="393,850" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/permiso.do,success,/permiso.do,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="985,950" />
-      <AbsolutePoint location="985,871" />
-      <AbsolutePoint location="861,871" />
-      <AbsolutePoint location="861,827" />
-      <AbsolutePoint location="562,827" />
-      <AbsolutePoint location="562,1755" />
-      <AbsolutePoint location="1913,1755" />
-      <AbsolutePoint location="1913,1036" />
-      <AbsolutePoint location="1123,1036" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/aviso.do,avisos,/abm/avisos.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="212,330" />
-      <AbsolutePoint location="802,330" />
-      <AbsolutePoint location="802,574" />
-      <AbsolutePoint location="950,574" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/club.do,success,/club.do,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="761,105" />
-      <AbsolutePoint location="761,-56" />
-      <AbsolutePoint location="808,-56" />
-      <AbsolutePoint location="808,149" />
-      <AbsolutePoint location="772,149" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/today.do,fichas,/bus/fichas.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1333,738" />
-      <AbsolutePoint location="1333,814" />
-      <AbsolutePoint location="1222,814" />
-      <AbsolutePoint location="1222,1143" />
-      <AbsolutePoint location="641,1143" />
-      <AbsolutePoint location="641,769" />
-      <AbsolutePoint location="650,769" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/rol.do,select,/abm/rol.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1101,821" />
-      <AbsolutePoint location="1526,821" />
-      <AbsolutePoint location="1526,-120" />
-      <AbsolutePoint location="-330,-120" />
-      <AbsolutePoint location="-330,944" />
-      <AbsolutePoint location="363,944" />
-      <AbsolutePoint location="363,899" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/usuario.do,valido,/home.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1705,638" />
-      <AbsolutePoint location="1705,1263" />
-      <AbsolutePoint location="240,1263" />
-      <AbsolutePoint location="240,974" />
-      <AbsolutePoint location="127,974" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/fichamedica.do,fichasMedicas,/abm/fichasmedicas.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1390,193" />
-      <AbsolutePoint location="1390,644" />
-      <AbsolutePoint location="720,644" />
-      <AbsolutePoint location="720,650" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/aviso.do,success,/aviso.do,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="181,250" />
-      <AbsolutePoint location="181,245" />
-      <AbsolutePoint location="260,245" />
-      <AbsolutePoint location="260,294" />
-      <AbsolutePoint location="212,294" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/rolpermiso.do,success,/rolpermiso.do,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1663,150" />
-      <AbsolutePoint location="1663,30" />
-      <AbsolutePoint location="1895,30" />
-      <AbsolutePoint location="1895,194" />
-      <AbsolutePoint location="1738,194" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/categoria.do,success,/jsp/success.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1156,193" />
-      <AbsolutePoint location="1156,614" />
-      <AbsolutePoint location="103,614" />
-      <AbsolutePoint location="103,599" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/usuario.do,update,/abm/usuario.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1606,638" />
-      <AbsolutePoint location="1606,750" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/permiso.do,success,permiso.do&amp;action=listAll,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="950,984" />
-      <AbsolutePoint location="855,984" />
-      <AbsolutePoint location="855,1074" />
-      <AbsolutePoint location="1250,1074" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/rolpermiso.do,rolespermisos,/abm/rolespermisos.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="0,0" />
-      <AbsolutePoint location="0,0" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/usuario.do,error,/jsp/error.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1636,550" />
-      <AbsolutePoint location="1636,271" />
-      <AbsolutePoint location="861,271" />
-      <AbsolutePoint location="861,452" />
-      <AbsolutePoint location="950,452" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/permiso.do,create,/abm/permiso.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1056,1038" />
-      <AbsolutePoint location="1056,1677" />
-      <AbsolutePoint location="1526,1677" />
-      <AbsolutePoint location="1526,974" />
-      <AbsolutePoint location="1550,974" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/jugador.do,jugadores,/abm/jugadores.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="897,193" />
-      <AbsolutePoint location="897,744" />
-      <AbsolutePoint location="411,744" />
-      <AbsolutePoint location="411,699" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/club.do,error,/jsp/error.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="765,193" />
-      <AbsolutePoint location="765,514" />
-      <AbsolutePoint location="996,514" />
-      <AbsolutePoint location="996,499" />
+      <AbsolutePoint location="319,105" />
+      <AbsolutePoint location="319,64" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/club.do,success,/jsp/success.jsp,1" routingType="0">
@@ -680,12 +433,6 @@
       <AbsolutePoint location="635,360" />
       <AbsolutePoint location="101,360" />
       <AbsolutePoint location="101,550" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/federacion.do,update,/abm/federacion.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="319,105" />
-      <AbsolutePoint location="319,64" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/medico.do,select,/abm/medico.jsp,1" routingType="0">
@@ -697,11 +444,17 @@
       <AbsolutePoint location="30,15" />
     </AutomaticBendpoints>
   </StrutsTransition>
+  <StrutsTransition id="index;6,null,/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
   <StrutsTransition id="/categoria.do,error,/jsp/error.jsp,1" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="1126,193" />
-      <AbsolutePoint location="1126,456" />
-      <AbsolutePoint location="1043,456" />
+      <AbsolutePoint location="1126,452" />
+      <AbsolutePoint location="1043,452" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/medico.do,create,/abm/medico.jsp,1" routingType="0">
@@ -710,10 +463,21 @@
       <AbsolutePoint location="-21,64" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/abm/rolpermiso.jsp,null,/rolpermiso.do,2" routingType="0">
+  <StrutsTransition id="/permiso.do,success,/jsp/success.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="0,0" />
-      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="950,1032" />
+      <AbsolutePoint location="-105,1032" />
+      <AbsolutePoint location="-105,592" />
+      <AbsolutePoint location="50,592" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/permiso.do,permisos,/abm/permisos.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1036,1038" />
+      <AbsolutePoint location="1036,1303" />
+      <AbsolutePoint location="1797,1303" />
+      <AbsolutePoint location="1797,664" />
+      <AbsolutePoint location="1850,664" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/federacion.do,success,/jsp/success.jsp,1" routingType="0">
@@ -721,6 +485,20 @@
       <AbsolutePoint location="321,193" />
       <AbsolutePoint location="321,552" />
       <AbsolutePoint location="156,552" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aviso.do,success,/jsp/success.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="71,338" />
+      <AbsolutePoint location="71,550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/federacion.do,error,/jsp/error.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="381,193" />
+      <AbsolutePoint location="381,211" />
+      <AbsolutePoint location="996,211" />
+      <AbsolutePoint location="996,450" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/aviso.do,update,/abm/aviso.jsp,1" routingType="0">
@@ -732,23 +510,28 @@
       <AbsolutePoint location="750,474" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/federacion.do,error,/jsp/error.jsp,1" routingType="0">
+  <StrutsTransition id="/rol.do,roles,/abm/roles.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="381,193" />
-      <AbsolutePoint location="381,211" />
-      <AbsolutePoint location="996,211" />
-      <AbsolutePoint location="996,450" />
+      <AbsolutePoint location="950,777" />
+      <AbsolutePoint location="771,777" />
+      <AbsolutePoint location="771,1251" />
+      <AbsolutePoint location="1833,1251" />
+      <AbsolutePoint location="1833,576" />
+      <AbsolutePoint location="1850,576" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/today.do,success,/today.do,1" routingType="0">
+  <StrutsTransition id="/permiso.do,select,/abm/permiso.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="1303,650" />
-      <AbsolutePoint location="1303,614" />
-      <AbsolutePoint location="1186,614" />
-      <AbsolutePoint location="1186,1845" />
-      <AbsolutePoint location="2245,1845" />
-      <AbsolutePoint location="2245,714" />
-      <AbsolutePoint location="1416,714" />
+      <AbsolutePoint location="1123,1032" />
+      <AbsolutePoint location="1624,1032" />
+      <AbsolutePoint location="1624,999" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rol.do,error,/jsp/error.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1088,750" />
+      <AbsolutePoint location="1088,492" />
+      <AbsolutePoint location="1043,492" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/usuario.do,select,/abm/usuario.jsp,1" routingType="0">
@@ -757,45 +540,47 @@
       <AbsolutePoint location="1576,750" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/rolpermiso.do,error,/jsp/error.jsp,1" routingType="0">
+  <StrutsTransition id="/abm/medico.jsp,null,/medico.do,2" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="1550,203" />
-      <AbsolutePoint location="1094,203" />
-      <AbsolutePoint location="1094,452" />
-      <AbsolutePoint location="1043,452" />
+      <AbsolutePoint location="9,64" />
+      <AbsolutePoint location="9,105" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/rolpermiso.do,select,/abm/rolpermiso.jsp,1" routingType="0">
+  <StrutsTransition id="/permiso.do,update,/abm/permiso.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="0,0" />
-      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="1118,950" />
+      <AbsolutePoint location="1118,836" />
+      <AbsolutePoint location="1532,836" />
+      <AbsolutePoint location="1532,974" />
+      <AbsolutePoint location="1550,974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fichamedica.do,create,/abm/fichamedica.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1325,105" />
+      <AbsolutePoint location="1325,64" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/permiso.do,error,/jsp/error.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1106,950" />
+      <AbsolutePoint location="1106,474" />
+      <AbsolutePoint location="1043,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/today.do,today,/bus/today.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1379,738" />
+      <AbsolutePoint location="1379,1113" />
+      <AbsolutePoint location="270,1113" />
+      <AbsolutePoint location="270,769" />
+      <AbsolutePoint location="150,769" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/medico.do,update,/abm/medico.jsp,1" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="39,105" />
       <AbsolutePoint location="39,64" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/today.do,today,/bus/today.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1416,672" />
-      <AbsolutePoint location="1464,672" />
-      <AbsolutePoint location="1464,1587" />
-      <AbsolutePoint location="294,1587" />
-      <AbsolutePoint location="294,774" />
-      <AbsolutePoint location="150,774" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
-  <StrutsTransition id="/permiso.do,error,/jsp/error.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1014,1038" />
-      <AbsolutePoint location="1014,1389" />
-      <AbsolutePoint location="2025,1389" />
-      <AbsolutePoint location="2025,426" />
-      <AbsolutePoint location="1072,426" />
-      <AbsolutePoint location="1072,460" />
-      <AbsolutePoint location="1043,460" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/rol.do,update,/abm/rol.jsp,1" routingType="0">
@@ -806,21 +591,21 @@
       <AbsolutePoint location="393,899" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/rolpermiso.do,success,/jsp/success.jsp,1" routingType="0">
-    <AutomaticBendpoints>
-      <AbsolutePoint location="1644,150" />
-      <AbsolutePoint location="1644,-280" />
-      <AbsolutePoint location="482,-280" />
-      <AbsolutePoint location="482,592" />
-      <AbsolutePoint location="156,592" />
-    </AutomaticBendpoints>
-  </StrutsTransition>
   <StrutsTransition id="/today.do,error,/jsp/error.jsp,1" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="1250,692" />
       <AbsolutePoint location="1222,692" />
-      <AbsolutePoint location="1222,460" />
-      <AbsolutePoint location="1043,460" />
+      <AbsolutePoint location="1222,456" />
+      <AbsolutePoint location="1043,456" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fichamedica.do,error,/jsp/error.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1417,149" />
+      <AbsolutePoint location="1436,149" />
+      <AbsolutePoint location="1436,514" />
+      <AbsolutePoint location="1026,514" />
+      <AbsolutePoint location="1026,499" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/fichamedica.do,success,/jsp/success.jsp,1" routingType="0">
@@ -834,6 +619,13 @@
       <AbsolutePoint location="73,599" />
     </AutomaticBendpoints>
   </StrutsTransition>
+  <StrutsTransition id="/categoria.do,select,/abm/categoria.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1230,105" />
+      <AbsolutePoint location="1230,39" />
+      <AbsolutePoint location="1215,39" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
   <StrutsTransition id="/aviso.do,select,/abm/aviso.jsp,1" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="90,250" />
@@ -844,11 +636,14 @@
       <AbsolutePoint location="700,450" />
     </AutomaticBendpoints>
   </StrutsTransition>
-  <StrutsTransition id="/categoria.do,select,/abm/categoria.jsp,1" routingType="0">
+  <StrutsTransition id="/jugador.do,success,/jsp/success.jsp,1" routingType="0">
     <AutomaticBendpoints>
-      <AbsolutePoint location="1230,105" />
-      <AbsolutePoint location="1230,39" />
-      <AbsolutePoint location="1215,39" />
+      <AbsolutePoint location="997,105" />
+      <AbsolutePoint location="997,-45" />
+      <AbsolutePoint location="-285,-45" />
+      <AbsolutePoint location="-285,510" />
+      <AbsolutePoint location="131,510" />
+      <AbsolutePoint location="131,550" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/federacion.do,federaciones,/abm/federaciones.jsp,1" routingType="0">
@@ -858,6 +653,14 @@
       <AbsolutePoint location="452,614" />
       <AbsolutePoint location="720,614" />
       <AbsolutePoint location="720,599" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/medico.do,error,/jsp/error.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-22,196" />
+      <AbsolutePoint location="-22,420" />
+      <AbsolutePoint location="966,420" />
+      <AbsolutePoint location="966,450" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/categoria.do,categorias,/abm/categorias.jsp,1" routingType="0">
